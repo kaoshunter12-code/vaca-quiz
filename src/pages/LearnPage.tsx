@@ -11,7 +11,11 @@ const ENCOURAGEMENTS = [
   '거의 다 왔어요! ✨',
 ]
 
-export default function LearnPage() {
+interface LearnPageProps {
+  onGoToQuiz?: () => void
+}
+
+export default function LearnPage({ onGoToQuiz }: LearnPageProps) {
   const [words, setWords] = useState<Word[]>([])
   const [index, setIndex] = useState(0)
   const [loading, setLoading] = useState(true)
@@ -131,13 +135,24 @@ export default function LearnPage() {
             <p className="text-slate-500 text-sm">
               {total}개의 단어를 모두 확인했어요. 잠시 후 빈칸 채우기 퀴즈로 복습해봐요.
             </p>
-            <button
-              type="button"
-              onClick={() => setIndex(0)}
-              className="mt-2 px-5 py-2.5 rounded-2xl bg-emerald-500 text-white font-medium active:scale-95 transition hover:bg-emerald-600"
-            >
-              다시 보기
-            </button>
+            <div className="flex gap-3 mt-2">
+              <button
+                type="button"
+                onClick={() => setIndex(0)}
+                className="px-5 py-2.5 rounded-2xl bg-white ring-1 ring-slate-200 text-slate-600 font-medium active:scale-95 transition"
+              >
+                다시 보기
+              </button>
+              {onGoToQuiz && (
+                <button
+                  type="button"
+                  onClick={onGoToQuiz}
+                  className="px-5 py-2.5 rounded-2xl bg-emerald-500 text-white font-medium active:scale-95 transition hover:bg-emerald-600"
+                >
+                  퀴즈 풀러 가기
+                </button>
+              )}
+            </div>
           </div>
         )}
       </div>
