@@ -128,12 +128,6 @@ function QuizCard({ word, blank, onAnswered, onNext }: QuizCardProps) {
   const [status, setStatus] = useState<AnswerStatus>('answering')
   const inputRef = useRef<HTMLInputElement>(null)
   const nextButtonRef = useRef<HTMLButtonElement>(null)
-  // Enter 키 핸들러(window 리스너)는 상태가 바뀔 때마다 새로 구독되므로,
-  // 그 사이 타이핑된 최신 입력값을 놓치지 않도록 ref에도 항상 반영해둔다.
-  const latestInput = useRef(input)
-  useEffect(() => {
-    latestInput.current = input
-  }, [input])
 
   useEffect(() => {
     inputRef.current?.focus()
@@ -147,12 +141,12 @@ function QuizCard({ word, blank, onAnswered, onNext }: QuizCardProps) {
   }, [status])
 
   const submitAnswer = useCallback(() => {
-    const value = latestInput.current.trim()
+    const value = input.trim()
     if (status !== 'answering' || value.length === 0) return
     const isCorrect = value.toLowerCase() === blank.text.toLowerCase()
     setStatus(isCorrect ? 'correct' : 'incorrect')
     onAnswered(isCorrect)
-  }, [status, blank, onAnswered])
+  }, [status, input, blank, onAnswered])
 
   useEffect(() => {
     // 어떤 요소가 포커스를 갖고 있는지와 상관없이 Enter 키가 항상 동작하도록
