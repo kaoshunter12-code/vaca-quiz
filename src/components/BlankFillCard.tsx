@@ -153,7 +153,7 @@ function AnswerCompareRow({ label, text, against, variant }: AnswerCompareRowPro
       <span className="text-xs font-medium text-slate-400 w-16 shrink-0">{label}</span>
       <span
         className={`font-mono text-base font-bold tracking-wide ${
-          isWrong ? 'text-rose-600 line-through decoration-rose-400 decoration-2' : 'text-emerald-700'
+          isWrong ? 'text-rose-600' : 'text-emerald-700'
         }`}
       >
         {[...text].map((char, i) => (
