@@ -127,10 +127,22 @@ function QuizCard({ word, blank, onAnswered, onNext }: QuizCardProps) {
   const [input, setInput] = useState('')
   const [status, setStatus] = useState<AnswerStatus>('answering')
   const inputRef = useRef<HTMLInputElement>(null)
+  const nextButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     inputRef.current?.focus()
   }, [])
+
+  useEffect(() => {
+    // 정답 확인 후에는 입력창이 disabled 되어 포커스를 잃으므로,
+    // "다음" 버튼에 포커스를 옮겨 Enter 키만으로 계속 진행할 수 있게 한다.
+    // setTimeout으로 한 틱 미루는 이유: 정답 제출에 쓴 Enter 키의 keyup이
+    // 아직 처리되지 않은 시점에 버튼을 바로 포커스하면, 같은 keyup이 버튼을
+    // 눌러버려 제출과 동시에 다음 문제로 넘어가는 문제가 생긴다.
+    if (status === 'answering') return
+    const timer = setTimeout(() => nextButtonRef.current?.focus(), 0)
+    return () => clearTimeout(timer)
+  }, [status])
 
   function submitAnswer() {
     if (status !== 'answering' || input.trim().length === 0) return
@@ -139,10 +151,8 @@ function QuizCard({ word, blank, onAnswered, onNext }: QuizCardProps) {
     onAnswered(isCorrect)
   }
 
-  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-    if (e.key !== 'Enter') return
-    if (status === 'answering') submitAnswer()
-    else onNext()
+  function handleInputKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === 'Enter') submitAnswer()
   }
 
   const before = word.example_en.slice(0, blank.start)
@@ -170,7 +180,7 @@ function QuizCard({ word, blank, onAnswered, onNext }: QuizCardProps) {
           type="text"
           value={status === 'answering' ? input : blank.text}
           onChange={(e) => setInput(e.target.value)}
-          onKeyDown={handleKeyDown}
+          onKeyDown={handleInputKeyDown}
           disabled={status !== 'answering'}
           autoComplete="off"
           autoCapitalize="off"
@@ -210,9 +220,10 @@ function QuizCard({ word, blank, onAnswered, onNext }: QuizCardProps) {
         </button>
       ) : (
         <button
+          ref={nextButtonRef}
           type="button"
           onClick={onNext}
-          className="py-3 rounded-2xl bg-slate-800 text-white font-medium active:scale-95 transition hover:bg-slate-700"
+          className="py-3 rounded-2xl bg-slate-800 text-white font-medium active:scale-95 transition hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
         >
           다음
         </button>
