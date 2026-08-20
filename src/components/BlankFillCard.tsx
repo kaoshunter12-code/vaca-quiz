@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { Word } from '../types/word'
 import type { TokenMatch } from '../lib/findWordToken'
+import { diffChars } from '../lib/diffChars'
 
 type AnswerStatus = 'answering' | 'correct' | 'incorrect'
 
@@ -92,19 +93,21 @@ export default function BlankFillCard({ word, blank, onAnswered, onNext }: Blank
         {after}
       </p>
 
-      {status !== 'answering' && (
-        <div
-          className={`rounded-2xl p-4 flex flex-col gap-1.5 ${
-            status === 'correct' ? 'bg-emerald-50' : 'bg-rose-50'
-          }`}
-        >
-          <p
-            className={`text-sm font-semibold ${
-              status === 'correct' ? 'text-emerald-700' : 'text-rose-600'
-            }`}
-          >
-            {status === 'correct' ? '정답이에요! 🎉' : `정답은 "${blank.text}" 이에요`}
-          </p>
+      {status === 'correct' && (
+        <div className="rounded-2xl p-4 flex flex-col gap-1.5 bg-emerald-50">
+          <p className="text-sm font-semibold text-emerald-700">정답이에요! 🎉</p>
+          <p className="text-sm text-slate-600">{word.example_en}</p>
+          <p className="text-sm text-slate-500">{word.example_ko}</p>
+        </div>
+      )}
+
+      {status === 'incorrect' && (
+        <div className="rounded-2xl p-4 flex flex-col gap-3 bg-rose-50">
+          <div className="flex flex-col gap-1">
+            <AnswerCompareRow label="내가 쓴 답" text={input.trim()} against={blank.text} variant="wrong" />
+            <AnswerCompareRow label="정답" text={blank.text} against={input.trim()} variant="correct" />
+          </div>
+          <div className="h-px bg-rose-100" />
           <p className="text-sm text-slate-600">{word.example_en}</p>
           <p className="text-sm text-slate-500">{word.example_ko}</p>
         </div>
@@ -129,6 +132,45 @@ export default function BlankFillCard({ word, blank, onAnswered, onNext }: Blank
           다음
         </button>
       )}
+    </div>
+  )
+}
+
+interface AnswerCompareRowProps {
+  label: string
+  text: string
+  against: string
+  variant: 'wrong' | 'correct'
+}
+
+/** 오답일 때 "내가 쓴 답"과 "정답"을 나란히 보여주며, 서로 다른 글자만 하이라이트한다. */
+function AnswerCompareRow({ label, text, against, variant }: AnswerCompareRowProps) {
+  const { aMatch: matchFlags } = diffChars(text, against)
+  const isWrong = variant === 'wrong'
+
+  return (
+    <div className="flex items-baseline gap-2">
+      <span className="text-xs font-medium text-slate-400 w-16 shrink-0">{label}</span>
+      <span
+        className={`font-mono text-base font-bold tracking-wide ${
+          isWrong ? 'text-rose-600 line-through decoration-rose-400 decoration-2' : 'text-emerald-700'
+        }`}
+      >
+        {[...text].map((char, i) => (
+          <span
+            key={i}
+            className={
+              matchFlags[i]
+                ? undefined
+                : isWrong
+                  ? 'bg-rose-200 rounded-sm'
+                  : 'bg-emerald-200 rounded-sm underline decoration-emerald-600 decoration-2'
+            }
+          >
+            {char}
+          </span>
+        ))}
+      </span>
     </div>
   )
 }
