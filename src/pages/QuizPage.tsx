@@ -126,6 +126,7 @@ interface QuizCardProps {
 function QuizCard({ word, blank, onAnswered, onNext }: QuizCardProps) {
   const [input, setInput] = useState('')
   const [status, setStatus] = useState<AnswerStatus>('answering')
+  const [debugLog, setDebugLog] = useState<string[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
   const nextButtonRef = useRef<HTMLButtonElement>(null)
   // Enter 키 핸들러(window 리스너)는 상태가 바뀔 때마다 새로 구독되므로,
@@ -164,6 +165,8 @@ function QuizCard({ word, blank, onAnswered, onNext }: QuizCardProps) {
     function handleWindowKeyDown(e: KeyboardEvent) {
       if (e.key !== 'Enter') return
       e.preventDefault()
+      const branch = status === 'answering' ? 'submit' : 'next'
+      setDebugLog((log) => [...log.slice(-4), `Enter 감지 → status=${status} → ${branch}() 호출`])
       if (status === 'answering') {
         submitAnswer()
       } else {
@@ -191,6 +194,16 @@ function QuizCard({ word, blank, onAnswered, onNext }: QuizCardProps) {
         status === 'incorrect' ? 'animate-shake' : status === 'correct' ? 'animate-pop' : ''
       }`}
     >
+      {/* 임시 디버그 패널: 원인 진단 후 제거 예정 */}
+      <div className="fixed bottom-16 left-0 right-0 z-50 bg-yellow-100 border-t-2 border-yellow-400 text-xs text-yellow-900 p-2 font-mono max-h-32 overflow-y-auto">
+        <p className="font-bold">[DEBUG] 현재 status: {status}</p>
+        {debugLog.length === 0 ? (
+          <p>아직 Enter 키가 감지되지 않았습니다.</p>
+        ) : (
+          debugLog.map((line, i) => <p key={i}>{line}</p>)
+        )}
+      </div>
+
       <p className="text-center text-lg font-semibold text-slate-700">{word.meaning}</p>
 
       <p className="text-lg sm:text-xl leading-relaxed text-slate-800 text-center">
