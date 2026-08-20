@@ -1,4 +1,5 @@
 import { readJSON, writeJSON } from '../lib/storage'
+import { diffInDays, todayString } from '../lib/date'
 
 export interface StudyStats {
   totalWordsLearned: number
@@ -13,17 +14,8 @@ const DEFAULT_STATS: StudyStats = {
   lastStudyDate: null,
 }
 
-function todayString(): string {
-  const d = new Date()
-  const y = d.getFullYear()
-  const m = String(d.getMonth() + 1).padStart(2, '0')
-  const day = String(d.getDate()).padStart(2, '0')
-  return `${y}-${m}-${day}`
-}
-
 function isYesterday(dateStr: string, today: string): boolean {
-  const diffMs = new Date(today).getTime() - new Date(dateStr).getTime()
-  return Math.round(diffMs / 86_400_000) === 1
+  return diffInDays(dateStr, today) === 1
 }
 
 export function getStats(): StudyStats {
