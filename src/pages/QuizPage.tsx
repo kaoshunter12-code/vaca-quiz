@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { Word } from '../types/word'
 import { wordRepository } from '../data/wordRepository'
 import { findWordToken, type TokenMatch } from '../lib/findWordToken'
@@ -128,32 +128,49 @@ function QuizCard({ word, blank, onAnswered, onNext }: QuizCardProps) {
   const [status, setStatus] = useState<AnswerStatus>('answering')
   const inputRef = useRef<HTMLInputElement>(null)
   const nextButtonRef = useRef<HTMLButtonElement>(null)
+  // Enter 키 핸들러(window 리스너)는 상태가 바뀔 때마다 새로 구독되므로,
+  // 그 사이 타이핑된 최신 입력값을 놓치지 않도록 ref에도 항상 반영해둔다.
+  const latestInput = useRef(input)
+  useEffect(() => {
+    latestInput.current = input
+  }, [input])
 
   useEffect(() => {
     inputRef.current?.focus()
   }, [])
 
   useEffect(() => {
-    // 정답 확인 후에는 입력창이 disabled 되어 포커스를 잃으므로,
-    // "다음" 버튼에 포커스를 옮겨 Enter 키만으로 계속 진행할 수 있게 한다.
-    // setTimeout으로 한 틱 미루는 이유: 정답 제출에 쓴 Enter 키의 keyup이
-    // 아직 처리되지 않은 시점에 버튼을 바로 포커스하면, 같은 keyup이 버튼을
-    // 눌러버려 제출과 동시에 다음 문제로 넘어가는 문제가 생긴다.
-    if (status === 'answering') return
-    const timer = setTimeout(() => nextButtonRef.current?.focus(), 0)
-    return () => clearTimeout(timer)
+    // 접근성을 위해 정답 확인 후 "다음" 버튼으로 포커스를 옮겨준다.
+    // (Enter 키 동작 자체는 아래 window keydown 리스너가 포커스 위치와
+    // 무관하게 처리하므로, 이 포커스 이동은 시각적 안내용일 뿐이다.)
+    if (status !== 'answering') nextButtonRef.current?.focus()
   }, [status])
 
-  function submitAnswer() {
-    if (status !== 'answering' || input.trim().length === 0) return
-    const isCorrect = input.trim().toLowerCase() === blank.text.toLowerCase()
+  const submitAnswer = useCallback(() => {
+    const value = latestInput.current.trim()
+    if (status !== 'answering' || value.length === 0) return
+    const isCorrect = value.toLowerCase() === blank.text.toLowerCase()
     setStatus(isCorrect ? 'correct' : 'incorrect')
     onAnswered(isCorrect)
-  }
+  }, [status, blank, onAnswered])
 
-  function handleInputKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-    if (e.key === 'Enter') submitAnswer()
-  }
+  useEffect(() => {
+    // 어떤 요소가 포커스를 갖고 있는지와 상관없이 Enter 키가 항상 동작하도록
+    // window 레벨에서 감지한다. 정답 확인 전에는 "제출", 확인 후에는 "다음
+    // 문제로 이동"에 연결되도록 현재 status를 기준으로 분기한다.
+    function handleWindowKeyDown(e: KeyboardEvent) {
+      if (e.key !== 'Enter') return
+      e.preventDefault()
+      if (status === 'answering') {
+        submitAnswer()
+      } else {
+        onNext()
+      }
+    }
+
+    window.addEventListener('keydown', handleWindowKeyDown)
+    return () => window.removeEventListener('keydown', handleWindowKeyDown)
+  }, [status, onNext, submitAnswer])
 
   const before = word.example_en.slice(0, blank.start)
   const after = word.example_en.slice(blank.end)
@@ -180,7 +197,6 @@ function QuizCard({ word, blank, onAnswered, onNext }: QuizCardProps) {
           type="text"
           value={status === 'answering' ? input : blank.text}
           onChange={(e) => setInput(e.target.value)}
-          onKeyDown={handleInputKeyDown}
           disabled={status !== 'answering'}
           autoComplete="off"
           autoCapitalize="off"
