@@ -158,6 +158,9 @@ function QuizCard({ word, blank, onAnswered, onNext }: QuizCardProps) {
     // 어떤 요소가 포커스를 갖고 있는지와 상관없이 Enter 키가 항상 동작하도록
     // window 레벨에서 감지한다. 정답 확인 전에는 "제출", 확인 후에는 "다음
     // 문제로 이동"에 연결되도록 현재 status를 기준으로 분기한다.
+    // capture 단계에 등록하는 이유: disabled 처리된 input 등 다른 요소가
+    // 이벤트를 가로막거나 stopPropagation 하더라도 영향을 받지 않도록,
+    // 이벤트가 실제 대상에 도달하기 전 가장 바깥(window)에서 먼저 가로챈다.
     function handleWindowKeyDown(e: KeyboardEvent) {
       if (e.key !== 'Enter') return
       e.preventDefault()
@@ -168,8 +171,8 @@ function QuizCard({ word, blank, onAnswered, onNext }: QuizCardProps) {
       }
     }
 
-    window.addEventListener('keydown', handleWindowKeyDown)
-    return () => window.removeEventListener('keydown', handleWindowKeyDown)
+    window.addEventListener('keydown', handleWindowKeyDown, { capture: true })
+    return () => window.removeEventListener('keydown', handleWindowKeyDown, { capture: true })
   }, [status, onNext, submitAnswer])
 
   const before = word.example_en.slice(0, blank.start)
