@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Word } from '../types/word'
 import { wordRepository } from '../data/wordRepository'
+import { recordDailyCompletion } from '../data/statsStore'
 import WordCard from '../components/WordCard'
 import ProgressBar from '../components/ProgressBar'
 
@@ -33,6 +34,10 @@ export default function LearnPage({ onGoToQuiz }: LearnPageProps) {
   const total = words.length
   const isDone = total > 0 && index >= total
   const currentWord = !isDone ? words[index] : undefined
+
+  useEffect(() => {
+    if (isDone) recordDailyCompletion(total)
+  }, [isDone, total])
 
   const encouragement = useMemo(() => {
     if (total === 0) return ''
