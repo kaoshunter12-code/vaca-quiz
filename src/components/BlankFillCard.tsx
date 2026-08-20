@@ -31,27 +31,10 @@ export default function BlankFillCard({ word, blank, onAnswered, onNext }: Blank
   const submitAnswer = useCallback(() => {
     const value = input.trim()
     if (status !== 'answering' || value.length === 0) return
-    const normalizedInput = value.toLowerCase()
-    const normalizedAnswer = blank.text.toLowerCase()
-    const isCorrect = normalizedInput === normalizedAnswer
-    // eslint-disable-next-line no-console
-    console.log(
-      '[QUIZ DEBUG] ' +
-        JSON.stringify({
-          word: word.word,
-          rawInput: input,
-          trimmedInput: value,
-          answerRaw: blank.text,
-          normalizedInput,
-          normalizedAnswer,
-          inputCharCodes: [...normalizedInput].map((c) => c.charCodeAt(0)),
-          answerCharCodes: [...normalizedAnswer].map((c) => c.charCodeAt(0)),
-          isCorrect,
-        }),
-    )
+    const isCorrect = value.toLowerCase() === blank.text.toLowerCase()
     setStatus(isCorrect ? 'correct' : 'incorrect')
     onAnswered(isCorrect)
-  }, [status, input, blank, onAnswered, word.word])
+  }, [status, input, blank, onAnswered])
 
   useEffect(() => {
     // 어떤 요소가 포커스를 갖고 있는지와 상관없이 Enter 키가 항상 동작하도록
