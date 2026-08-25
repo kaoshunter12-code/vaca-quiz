@@ -33,9 +33,11 @@ export default function BlankFillCard({ word, blank, onAnswered, onNext }: Blank
     const value = input.trim()
     if (status !== 'answering' || value.length === 0) return
     const isCorrect = value.toLowerCase() === blank.text.toLowerCase()
+    // eslint-disable-next-line no-console
+    console.log('[SUBMIT DEBUG]', JSON.stringify({ word: word.word, inputStateAtSubmit: input, trimmed: value }))
     setStatus(isCorrect ? 'correct' : 'incorrect')
     onAnswered(isCorrect)
-  }, [status, input, blank, onAnswered])
+  }, [status, input, blank, onAnswered, word.word])
 
   useEffect(() => {
     // 어떤 요소가 포커스를 갖고 있는지와 상관없이 Enter 키가 항상 동작하도록
@@ -82,10 +84,18 @@ export default function BlankFillCard({ word, blank, onAnswered, onNext }: Blank
           ref={inputRef}
           type="text"
           value={status === 'answering' ? input : blank.text}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={(e) => {
+            // eslint-disable-next-line no-console
+            console.log(
+              '[ONCHANGE DEBUG]',
+              JSON.stringify({ word: word.word, newValue: e.target.value }),
+            )
+            setInput(e.target.value)
+          }}
           disabled={status !== 'answering'}
           autoComplete="off"
           autoCapitalize="off"
+          autoCorrect="off"
           spellCheck={false}
           size={Math.max(blank.text.length, 4)}
           className={`mx-1 inline-block text-center border-b-2 bg-transparent outline-none font-semibold transition-colors ${inputStateClass}`}
