@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Word } from '../types/word'
-import { wordRepository } from '../data/wordRepository'
+import { wordRepository, type DailySetInfo } from '../data/wordRepository'
 import { recordDailyCompletion } from '../data/statsStore'
 import WordCard from '../components/WordCard'
 import ProgressBar from '../components/ProgressBar'
@@ -18,6 +18,7 @@ interface LearnPageProps {
 
 export default function LearnPage({ onGoToQuiz }: LearnPageProps) {
   const [words, setWords] = useState<Word[]>([])
+  const [setInfo, setSetInfo] = useState<DailySetInfo | null>(null)
   const [index, setIndex] = useState(0)
   const [loading, setLoading] = useState(true)
   const touchStartX = useRef<number | null>(null)
@@ -25,10 +26,13 @@ export default function LearnPage({ onGoToQuiz }: LearnPageProps) {
   const [isDragging, setIsDragging] = useState(false)
 
   useEffect(() => {
-    wordRepository.getDailyWords(50).then((w) => {
-      setWords(w)
-      setLoading(false)
-    })
+    Promise.all([wordRepository.getDailyWords(50), wordRepository.getDailySetInfo(50)]).then(
+      ([w, info]) => {
+        setWords(w)
+        setSetInfo(info)
+        setLoading(false)
+      },
+    )
   }, [])
 
   const total = words.length
@@ -88,7 +92,14 @@ export default function LearnPage({ onGoToQuiz }: LearnPageProps) {
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
       <div className="w-full max-w-md flex flex-col gap-6">
         <header className="flex flex-col gap-1">
-          <h1 className="text-xl font-bold text-slate-800">오늘의 단어</h1>
+          <div className="flex items-center gap-2">
+            <h1 className="text-xl font-bold text-slate-800">오늘의 단어</h1>
+            {setInfo && (
+              <span className="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
+                {setInfo.setNumber}일차 세트 ({setInfo.setNumber}/{setInfo.totalSets})
+              </span>
+            )}
+          </div>
           <p className="text-sm text-slate-400">예문과 함께 하루 50개씩, 하나씩 익혀봐요</p>
         </header>
 
