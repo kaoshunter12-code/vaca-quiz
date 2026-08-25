@@ -1,52 +1,4002 @@
 [
-  { "id": "achieve", "word": "achieve", "meaning": "성취하다, 달성하다", "example_en": "She worked hard to achieve her goals.", "example_ko": "그녀는 목표를 달성하기 위해 열심히 노력했다.", "difficulty": "easy" },
-  { "id": "accomplish", "word": "accomplish", "meaning": "완수하다, 해내다", "example_en": "We accomplished the project ahead of schedule.", "example_ko": "우리는 일정보다 앞서 프로젝트를 완수했다.", "difficulty": "medium" },
-  { "id": "adapt", "word": "adapt", "meaning": "적응하다", "example_en": "It took him a while to adapt to the new city.", "example_ko": "그는 새로운 도시에 적응하는 데 시간이 걸렸다.", "difficulty": "medium" },
-  { "id": "afford", "word": "afford", "meaning": "여유가 되다, 감당하다", "example_en": "I can't afford to buy a new car this year.", "example_ko": "나는 올해 새 차를 살 여유가 없다.", "difficulty": "easy" },
-  { "id": "appreciate", "word": "appreciate", "meaning": "고마워하다, 진가를 알다", "example_en": "I really appreciate your help with this.", "example_ko": "이 일을 도와줘서 정말 고마워요.", "difficulty": "easy" },
-  { "id": "assume", "word": "assume", "meaning": "가정하다, 추정하다", "example_en": "Let's not assume anything until we have the facts.", "example_ko": "사실을 알기 전까지는 아무것도 추정하지 말자.", "difficulty": "medium" },
-  { "id": "avoid", "word": "avoid", "meaning": "피하다", "example_en": "You should avoid eating too much sugar.", "example_ko": "설탕을 너무 많이 먹는 것을 피해야 한다.", "difficulty": "easy" },
-  { "id": "borrow", "word": "borrow", "meaning": "빌리다", "example_en": "Can I borrow your pen for a second?", "example_ko": "잠깐 펜 좀 빌려줄 수 있어?", "difficulty": "easy" },
-  { "id": "cancel", "word": "cancel", "meaning": "취소하다", "example_en": "The flight was canceled due to bad weather.", "example_ko": "그 항공편은 악천후로 인해 취소되었다.", "difficulty": "easy" },
-  { "id": "compare", "word": "compare", "meaning": "비교하다", "example_en": "It's hard to compare the two products fairly.", "example_ko": "두 제품을 공정하게 비교하기는 어렵다.", "difficulty": "medium" },
-  { "id": "complain", "word": "complain", "meaning": "불평하다", "example_en": "He always complains about the weather.", "example_ko": "그는 항상 날씨에 대해 불평한다.", "difficulty": "easy" },
-  { "id": "confirm", "word": "confirm", "meaning": "확인하다", "example_en": "Please confirm your reservation by email.", "example_ko": "이메일로 예약을 확인해 주세요.", "difficulty": "medium" },
-  { "id": "consider", "word": "consider", "meaning": "고려하다", "example_en": "We should consider all the options before deciding.", "example_ko": "결정하기 전에 모든 선택지를 고려해야 한다.", "difficulty": "medium" },
-  { "id": "convince", "word": "convince", "meaning": "설득하다, 확신시키다", "example_en": "She convinced me to try the new restaurant.", "example_ko": "그녀는 나에게 새로운 식당에 가보라고 설득했다.", "difficulty": "medium" },
-  { "id": "decide", "word": "decide", "meaning": "결정하다", "example_en": "We haven't decided where to go for vacation.", "example_ko": "우리는 휴가를 어디로 갈지 아직 결정하지 못했다.", "difficulty": "easy" },
-  { "id": "deliver", "word": "deliver", "meaning": "배달하다, 전달하다", "example_en": "The package will be delivered tomorrow morning.", "example_ko": "그 소포는 내일 아침에 배달될 것이다.", "difficulty": "easy" },
-  { "id": "depend", "word": "depend", "meaning": "의존하다, 달려있다", "example_en": "The picnic depends on the weather tomorrow.", "example_ko": "소풍은 내일 날씨에 달려 있다.", "difficulty": "easy" },
-  { "id": "describe", "word": "describe", "meaning": "묘사하다, 설명하다", "example_en": "Can you describe what happened at the meeting?", "example_ko": "회의에서 무슨 일이 있었는지 설명해 줄 수 있어?", "difficulty": "easy" },
-  { "id": "discover", "word": "discover", "meaning": "발견하다", "example_en": "Scientists discovered a new species in the forest.", "example_ko": "과학자들은 숲에서 새로운 종을 발견했다.", "difficulty": "medium" },
-  { "id": "encourage", "word": "encourage", "meaning": "격려하다, 장려하다", "example_en": "My teacher encouraged me to keep writing.", "example_ko": "선생님은 나에게 계속 글을 쓰라고 격려해 주셨다.", "difficulty": "medium" },
-  { "id": "engage", "word": "engage", "meaning": "참여시키다, 몰두하게 하다", "example_en": "The game really engages young children.", "example_ko": "그 게임은 어린아이들을 정말 몰입하게 만든다.", "difficulty": "hard" },
-  { "id": "ensure", "word": "ensure", "meaning": "보장하다, 확실히 하다", "example_en": "Please ensure the door is locked before you leave.", "example_ko": "나가기 전에 문이 잠겨 있는지 확인해 주세요.", "difficulty": "medium" },
-  { "id": "estimate", "word": "estimate", "meaning": "추정하다, 견적을 내다", "example_en": "The mechanic estimated the repair would cost $200.", "example_ko": "정비사는 수리 비용이 200달러 정도 들 것이라고 추정했다.", "difficulty": "medium" },
-  { "id": "exchange", "word": "exchange", "meaning": "교환하다", "example_en": "I'd like to exchange this shirt for a larger size.", "example_ko": "이 셔츠를 더 큰 사이즈로 교환하고 싶어요.", "difficulty": "easy" },
-  { "id": "expect", "word": "expect", "meaning": "기대하다, 예상하다", "example_en": "We expect the results next Monday.", "example_ko": "우리는 다음 주 월요일에 결과가 나올 것으로 예상한다.", "difficulty": "easy" },
-  { "id": "experience", "word": "experience", "meaning": "경험하다", "example_en": "Living abroad helped her experience new cultures.", "example_ko": "해외에서 사는 것은 그녀가 새로운 문화를 경험하도록 도왔다.", "difficulty": "medium" },
-  { "id": "explain", "word": "explain", "meaning": "설명하다", "example_en": "Could you explain how this machine works?", "example_ko": "이 기계가 어떻게 작동하는지 설명해 줄 수 있어요?", "difficulty": "easy" },
-  { "id": "explore", "word": "explore", "meaning": "탐험하다, 탐구하다", "example_en": "They spent the weekend exploring the old city.", "example_ko": "그들은 주말 동안 옛 도시를 탐험하며 보냈다.", "difficulty": "easy" },
-  { "id": "express", "word": "express", "meaning": "표현하다", "example_en": "It's important to express your feelings honestly.", "example_ko": "자신의 감정을 솔직하게 표현하는 것이 중요하다.", "difficulty": "medium" },
-  { "id": "focus", "word": "focus", "meaning": "집중하다", "example_en": "I need to focus on my studies this week.", "example_ko": "나는 이번 주에 공부에 집중해야 한다.", "difficulty": "easy" },
-  { "id": "gather", "word": "gather", "meaning": "모으다, 모이다", "example_en": "The family gathers for dinner every Sunday.", "example_ko": "그 가족은 매주 일요일마다 저녁 식사를 위해 모인다.", "difficulty": "easy" },
-  { "id": "guess", "word": "guess", "meaning": "추측하다", "example_en": "I guess we should leave now to avoid traffic.", "example_ko": "교통체증을 피하려면 지금 출발해야 할 것 같아.", "difficulty": "easy" },
-  { "id": "handle", "word": "handle", "meaning": "다루다, 처리하다", "example_en": "She handled the difficult situation very calmly.", "example_ko": "그녀는 그 어려운 상황을 매우 침착하게 처리했다.", "difficulty": "medium" },
-  { "id": "hesitate", "word": "hesitate", "meaning": "망설이다", "example_en": "Don't hesitate to call me if you need anything.", "example_ko": "필요한 게 있으면 망설이지 말고 전화하세요.", "difficulty": "medium" },
-  { "id": "identify", "word": "identify", "meaning": "확인하다, 식별하다", "example_en": "The doctor identified the cause of the pain.", "example_ko": "의사는 통증의 원인을 확인했다.", "difficulty": "medium" },
-  { "id": "imagine", "word": "imagine", "meaning": "상상하다", "example_en": "Imagine living on a small island for a year.", "example_ko": "일 년 동안 작은 섬에서 사는 것을 상상해 봐.", "difficulty": "easy" },
-  { "id": "improve", "word": "improve", "meaning": "개선하다, 향상시키다", "example_en": "Practicing every day will improve your speaking skills.", "example_ko": "매일 연습하면 말하기 실력이 향상될 것이다.", "difficulty": "easy" },
-  { "id": "include", "word": "include", "meaning": "포함하다", "example_en": "The price includes breakfast and taxes.", "example_ko": "그 가격에는 조식과 세금이 포함되어 있다.", "difficulty": "easy" },
-  { "id": "increase", "word": "increase", "meaning": "증가시키다", "example_en": "The company plans to increase its prices next month.", "example_ko": "그 회사는 다음 달에 가격을 인상할 계획이다.", "difficulty": "easy" },
-  { "id": "influence", "word": "influence", "meaning": "영향을 미치다", "example_en": "Social media can influence how people think.", "example_ko": "소셜 미디어는 사람들의 생각에 영향을 줄 수 있다.", "difficulty": "medium" },
-  { "id": "inform", "word": "inform", "meaning": "알리다, 통지하다", "example_en": "Please inform us if your address changes.", "example_ko": "주소가 바뀌면 저희에게 알려 주세요.", "difficulty": "medium" },
-  { "id": "insist", "word": "insist", "meaning": "주장하다, 고집하다", "example_en": "He insisted on paying for the dinner.", "example_ko": "그는 저녁 식사비를 자신이 내겠다고 고집했다.", "difficulty": "hard" },
-  { "id": "introduce", "word": "introduce", "meaning": "소개하다, 도입하다", "example_en": "Let me introduce you to my colleague.", "example_ko": "제 동료를 소개해 드릴게요.", "difficulty": "easy" },
-  { "id": "involve", "word": "involve", "meaning": "포함하다, 관련시키다", "example_en": "The project involves several different departments.", "example_ko": "그 프로젝트는 여러 다른 부서를 포함한다.", "difficulty": "hard" },
-  { "id": "manage", "word": "manage", "meaning": "관리하다, 해내다", "example_en": "She manages a team of ten people.", "example_ko": "그녀는 열 명으로 이루어진 팀을 관리한다.", "difficulty": "easy" },
-  { "id": "mention", "word": "mention", "meaning": "언급하다", "example_en": "He mentioned that he might be late today.", "example_ko": "그는 오늘 늦을 수도 있다고 언급했다.", "difficulty": "easy" },
-  { "id": "notice", "word": "notice", "meaning": "알아차리다", "example_en": "I noticed a small crack in the window.", "example_ko": "나는 창문에 작은 금이 간 것을 알아차렸다.", "difficulty": "easy" },
-  { "id": "occur", "word": "occur", "meaning": "발생하다, 일어나다", "example_en": "The accident occurred late at night.", "example_ko": "그 사고는 늦은 밤에 발생했다.", "difficulty": "hard" },
-  { "id": "offer", "word": "offer", "meaning": "제공하다, 제안하다", "example_en": "The hotel offers free breakfast to guests.", "example_ko": "그 호텔은 투숙객에게 무료 조식을 제공한다.", "difficulty": "easy" },
-  { "id": "organize", "word": "organize", "meaning": "조직하다, 정리하다", "example_en": "We need to organize the files before the audit.", "example_ko": "감사 전에 파일을 정리해야 한다.", "difficulty": "medium" }
+  {
+    "id": "achieve",
+    "word": "achieve",
+    "meaning": "성취하다, 달성하다",
+    "example_en": "She worked hard to achieve her goals.",
+    "example_ko": "그녀는 목표를 달성하기 위해 열심히 노력했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "afford",
+    "word": "afford",
+    "meaning": "여유가 되다, 감당하다",
+    "example_en": "I can't afford to buy a new car this year.",
+    "example_ko": "나는 올해 새 차를 살 여유가 없다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "appreciate",
+    "word": "appreciate",
+    "meaning": "고마워하다, 진가를 알다",
+    "example_en": "I really appreciate your help with this.",
+    "example_ko": "이 일을 도와줘서 정말 고마워요.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "avoid",
+    "word": "avoid",
+    "meaning": "피하다",
+    "example_en": "You should avoid eating too much sugar.",
+    "example_ko": "설탕을 너무 많이 먹는 것을 피해야 한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "borrow",
+    "word": "borrow",
+    "meaning": "빌리다",
+    "example_en": "Can I borrow your pen for a second?",
+    "example_ko": "잠깐 펜 좀 빌려줄 수 있어?",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cancel",
+    "word": "cancel",
+    "meaning": "취소하다",
+    "example_en": "The flight was canceled due to bad weather.",
+    "example_ko": "그 항공편은 악천후로 인해 취소되었다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "complain",
+    "word": "complain",
+    "meaning": "불평하다",
+    "example_en": "He always complains about the weather.",
+    "example_ko": "그는 항상 날씨에 대해 불평한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "decide",
+    "word": "decide",
+    "meaning": "결정하다",
+    "example_en": "We haven't decided where to go for vacation.",
+    "example_ko": "우리는 휴가를 어디로 갈지 아직 결정하지 못했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "deliver",
+    "word": "deliver",
+    "meaning": "배달하다, 전달하다",
+    "example_en": "The package will be delivered tomorrow morning.",
+    "example_ko": "그 소포는 내일 아침에 배달될 것이다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "depend",
+    "word": "depend",
+    "meaning": "의존하다, 달려있다",
+    "example_en": "The picnic depends on the weather tomorrow.",
+    "example_ko": "소풍은 내일 날씨에 달려 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "describe",
+    "word": "describe",
+    "meaning": "묘사하다, 설명하다",
+    "example_en": "Can you describe what happened at the meeting?",
+    "example_ko": "회의에서 무슨 일이 있었는지 설명해 줄 수 있어?",
+    "difficulty": "easy"
+  },
+  {
+    "id": "exchange",
+    "word": "exchange",
+    "meaning": "교환하다",
+    "example_en": "I'd like to exchange this shirt for a larger size.",
+    "example_ko": "이 셔츠를 더 큰 사이즈로 교환하고 싶어요.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "expect",
+    "word": "expect",
+    "meaning": "기대하다, 예상하다",
+    "example_en": "We expect the results next Monday.",
+    "example_ko": "우리는 다음 주 월요일에 결과가 나올 것으로 예상한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "explain",
+    "word": "explain",
+    "meaning": "설명하다",
+    "example_en": "Could you explain how this machine works?",
+    "example_ko": "이 기계가 어떻게 작동하는지 설명해 줄 수 있어요?",
+    "difficulty": "easy"
+  },
+  {
+    "id": "explore",
+    "word": "explore",
+    "meaning": "탐험하다, 탐구하다",
+    "example_en": "They spent the weekend exploring the old city.",
+    "example_ko": "그들은 주말 동안 옛 도시를 탐험하며 보냈다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "focus",
+    "word": "focus",
+    "meaning": "집중하다",
+    "example_en": "I need to focus on my studies this week.",
+    "example_ko": "나는 이번 주에 공부에 집중해야 한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gather",
+    "word": "gather",
+    "meaning": "모으다, 모이다",
+    "example_en": "The family gathers for dinner every Sunday.",
+    "example_ko": "그 가족은 매주 일요일마다 저녁 식사를 위해 모인다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "guess",
+    "word": "guess",
+    "meaning": "추측하다",
+    "example_en": "I guess we should leave now to avoid traffic.",
+    "example_ko": "교통체증을 피하려면 지금 출발해야 할 것 같아.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "imagine",
+    "word": "imagine",
+    "meaning": "상상하다",
+    "example_en": "Imagine living on a small island for a year.",
+    "example_ko": "일 년 동안 작은 섬에서 사는 것을 상상해 봐.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "improve",
+    "word": "improve",
+    "meaning": "개선하다, 향상시키다",
+    "example_en": "Practicing every day will improve your speaking skills.",
+    "example_ko": "매일 연습하면 말하기 실력이 향상될 것이다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "include",
+    "word": "include",
+    "meaning": "포함하다",
+    "example_en": "The price includes breakfast and taxes.",
+    "example_ko": "그 가격에는 조식과 세금이 포함되어 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "increase",
+    "word": "increase",
+    "meaning": "증가시키다",
+    "example_en": "The company plans to increase its prices next month.",
+    "example_ko": "그 회사는 다음 달에 가격을 인상할 계획이다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "introduce",
+    "word": "introduce",
+    "meaning": "소개하다, 도입하다",
+    "example_en": "Let me introduce you to my colleague.",
+    "example_ko": "제 동료를 소개해 드릴게요.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "manage",
+    "word": "manage",
+    "meaning": "관리하다, 해내다",
+    "example_en": "She manages a team of ten people.",
+    "example_ko": "그녀는 열 명으로 이루어진 팀을 관리한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mention",
+    "word": "mention",
+    "meaning": "언급하다",
+    "example_en": "He mentioned that he might be late today.",
+    "example_ko": "그는 오늘 늦을 수도 있다고 언급했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "notice",
+    "word": "notice",
+    "meaning": "알아차리다",
+    "example_en": "I noticed a small crack in the window.",
+    "example_ko": "나는 창문에 작은 금이 간 것을 알아차렸다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "offer",
+    "word": "offer",
+    "meaning": "제공하다, 제안하다",
+    "example_en": "The hotel offers free breakfast to guests.",
+    "example_ko": "그 호텔은 투숙객에게 무료 조식을 제공한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "accept",
+    "word": "accept",
+    "meaning": "받아들이다, 수락하다",
+    "example_en": "She accepted the job offer without hesitation.",
+    "example_ko": "그녀는 망설임 없이 그 일자리 제안을 수락했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "carry",
+    "word": "carry",
+    "meaning": "나르다, 운반하다",
+    "example_en": "Can you help me carry these boxes upstairs?",
+    "example_ko": "이 상자들을 위층으로 나르는 것 좀 도와줄래요?",
+    "difficulty": "easy"
+  },
+  {
+    "id": "catch",
+    "word": "catch",
+    "meaning": "잡다, (병에) 걸리다",
+    "example_en": "He always tries to catch the 8 AM train.",
+    "example_ko": "그는 항상 오전 8시 기차를 타려고 한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "comment",
+    "word": "comment",
+    "meaning": "논평하다, 댓글",
+    "example_en": "Several viewers commented on the video.",
+    "example_ko": "몇몇 시청자들이 그 영상에 댓글을 남겼다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "complete",
+    "word": "complete",
+    "meaning": "완료하다, 완전한",
+    "example_en": "She completed the report ahead of the deadline.",
+    "example_ko": "그녀는 마감일보다 앞서 보고서를 완료했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "contact",
+    "word": "contact",
+    "meaning": "연락하다",
+    "example_en": "Please contact us if you have any questions.",
+    "example_ko": "궁금한 점이 있으면 저희에게 연락해 주세요.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "continue",
+    "word": "continue",
+    "meaning": "계속하다",
+    "example_en": "They continued talking even after the bell rang.",
+    "example_ko": "그들은 종이 울린 후에도 계속 이야기했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "control",
+    "word": "control",
+    "meaning": "통제하다, 제어하다",
+    "example_en": "You can control the lights with your phone.",
+    "example_ko": "휴대폰으로 조명을 제어할 수 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cook",
+    "word": "cook",
+    "meaning": "요리하다",
+    "example_en": "My friend cooks dinner for us every Friday.",
+    "example_ko": "내 친구는 매주 금요일마다 우리를 위해 저녁을 요리해 준다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "discuss",
+    "word": "discuss",
+    "meaning": "논의하다, 토론하다",
+    "example_en": "Let's discuss this over lunch tomorrow.",
+    "example_ko": "내일 점심을 먹으면서 이 문제를 논의하죠.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "download",
+    "word": "download",
+    "meaning": "다운로드하다",
+    "example_en": "You can download the file from our website.",
+    "example_ko": "저희 웹사이트에서 그 파일을 다운로드할 수 있습니다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "draw",
+    "word": "draw",
+    "meaning": "그리다, 끌어당기다",
+    "example_en": "My daughter loves to draw animals.",
+    "example_ko": "내 딸은 동물 그림 그리는 것을 좋아한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "drop",
+    "word": "drop",
+    "meaning": "떨어뜨리다, 그만두다",
+    "example_en": "He accidentally dropped his phone on the floor.",
+    "example_ko": "그는 실수로 휴대폰을 바닥에 떨어뜨렸다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "earn",
+    "word": "earn",
+    "meaning": "벌다, 얻다",
+    "example_en": "She earns extra money by tutoring on weekends.",
+    "example_ko": "그녀는 주말에 과외를 하며 부수입을 번다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "edit",
+    "word": "edit",
+    "meaning": "편집하다, 수정하다",
+    "example_en": "He edited the video before posting it online.",
+    "example_ko": "그는 온라인에 게시하기 전에 영상을 편집했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "enjoy",
+    "word": "enjoy",
+    "meaning": "즐기다",
+    "example_en": "We enjoyed a quiet walk along the beach.",
+    "example_ko": "우리는 해변을 따라 조용히 산책하는 것을 즐겼다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "enter",
+    "word": "enter",
+    "meaning": "들어가다, 입력하다",
+    "example_en": "Please enter your password to continue.",
+    "example_ko": "계속하시려면 비밀번호를 입력해 주세요.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "face",
+    "word": "face",
+    "meaning": "직면하다, 마주하다",
+    "example_en": "The company faces serious financial difficulties.",
+    "example_ko": "그 회사는 심각한 재정적 어려움에 직면해 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fail",
+    "word": "fail",
+    "meaning": "실패하다",
+    "example_en": "The plan failed because of poor communication.",
+    "example_ko": "그 계획은 소통 부족으로 실패했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fight",
+    "word": "fight",
+    "meaning": "싸우다",
+    "example_en": "The siblings always fight over the last piece of cake.",
+    "example_ko": "그 남매는 항상 마지막 케이크 조각을 두고 다툰다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fill",
+    "word": "fill",
+    "meaning": "채우다",
+    "example_en": "She filled the form out and handed it in.",
+    "example_ko": "그녀는 양식을 작성해서 제출했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "finish",
+    "word": "finish",
+    "meaning": "끝내다, 마치다",
+    "example_en": "He finished his homework before dinner.",
+    "example_ko": "그는 저녁 식사 전에 숙제를 끝냈다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fix",
+    "word": "fix",
+    "meaning": "고치다, 수리하다",
+    "example_en": "Can you fix the leaking faucet in the kitchen?",
+    "example_ko": "주방에 물이 새는 수도꼭지 좀 고쳐 줄 수 있어요?",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fold",
+    "word": "fold",
+    "meaning": "접다",
+    "example_en": "She folded the laundry while watching TV.",
+    "example_ko": "그녀는 텔레비전을 보면서 빨래를 갰다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "follow",
+    "word": "follow",
+    "meaning": "따르다, 따라가다",
+    "example_en": "Please follow the instructions carefully.",
+    "example_ko": "지시 사항을 주의 깊게 따라 주세요.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "freeze",
+    "word": "freeze",
+    "meaning": "얼다, 얼리다",
+    "example_en": "You can freeze the leftover soup for later.",
+    "example_ko": "남은 수프는 나중을 위해 얼려 둘 수 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "grab",
+    "word": "grab",
+    "meaning": "움켜잡다, 급히 잡다",
+    "example_en": "Let's grab a coffee before the meeting starts.",
+    "example_ko": "회의 시작 전에 커피 한 잔 얼른 마시자.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "greet",
+    "word": "greet",
+    "meaning": "인사하다, 맞이하다",
+    "example_en": "The host greeted every guest at the door.",
+    "example_ko": "주최자는 문 앞에서 손님 한 명 한 명을 맞이했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "guide",
+    "word": "guide",
+    "meaning": "안내하다, 이끌다",
+    "example_en": "A local guide led us through the old town.",
+    "example_ko": "현지 가이드가 우리를 구시가지로 안내했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hang",
+    "word": "hang",
+    "meaning": "걸다, 매달다",
+    "example_en": "She hangs a new picture on the wall every month.",
+    "example_ko": "그녀는 매달 벽에 새 그림을 건다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hide",
+    "word": "hide",
+    "meaning": "숨다, 숨기다",
+    "example_en": "The kids always hide behind the couch during the game.",
+    "example_ko": "아이들은 그 게임을 할 때마다 항상 소파 뒤에 숨는다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hire",
+    "word": "hire",
+    "meaning": "고용하다",
+    "example_en": "The startup hired three new developers this month.",
+    "example_ko": "그 스타트업은 이번 달에 신입 개발자 세 명을 채용했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hold",
+    "word": "hold",
+    "meaning": "잡다, 개최하다",
+    "example_en": "The company will hold its annual conference in June.",
+    "example_ko": "그 회사는 6월에 연례 컨퍼런스를 개최할 것이다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hug",
+    "word": "hug",
+    "meaning": "껴안다, 포옹하다",
+    "example_en": "She always wants to hug her friends when she sees them.",
+    "example_ko": "그녀는 친구들을 만나면 항상 안아주고 싶어 한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hurry",
+    "word": "hurry",
+    "meaning": "서두르다",
+    "example_en": "We need to hurry or we'll miss the bus.",
+    "example_ko": "서두르지 않으면 버스를 놓칠 것이다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hurt",
+    "word": "hurt",
+    "meaning": "다치게 하다, 아프다",
+    "example_en": "He hurt his back while lifting the boxes.",
+    "example_ko": "그는 상자를 들다가 허리를 다쳤다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ignore",
+    "word": "ignore",
+    "meaning": "무시하다",
+    "example_en": "She ignored the noise and kept working.",
+    "example_ko": "그녀는 소음을 무시하고 계속 일했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "install",
+    "word": "install",
+    "meaning": "설치하다",
+    "example_en": "He installed new software on his laptop.",
+    "example_ko": "그는 노트북에 새 소프트웨어를 설치했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "interview",
+    "word": "interview",
+    "meaning": "면접을 보다, 인터뷰하다",
+    "example_en": "The reporter interviewed several local business owners.",
+    "example_ko": "그 기자는 여러 지역 사업주들을 인터뷰했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "invite",
+    "word": "invite",
+    "meaning": "초대하다",
+    "example_en": "We invited our neighbors to the housewarming party.",
+    "example_ko": "우리는 집들이에 이웃들을 초대했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "join",
+    "word": "join",
+    "meaning": "가입하다, 합류하다",
+    "example_en": "She joined a local running club last spring.",
+    "example_ko": "그녀는 지난봄에 지역 달리기 동호회에 가입했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "land",
+    "word": "land",
+    "meaning": "착륙하다, 도착하다",
+    "example_en": "The plane landed safely despite the storm.",
+    "example_ko": "폭풍우에도 불구하고 비행기는 안전하게 착륙했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "last",
+    "word": "last",
+    "meaning": "지속되다",
+    "example_en": "The meeting lasted almost two hours.",
+    "example_ko": "그 회의는 거의 두 시간 동안 계속되었다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lend",
+    "word": "lend",
+    "meaning": "빌려주다",
+    "example_en": "Could you lend me your umbrella today?",
+    "example_ko": "오늘 우산 좀 빌려줄 수 있어?",
+    "difficulty": "easy"
+  },
+  {
+    "id": "list",
+    "word": "list",
+    "meaning": "목록을 작성하다, 열거하다",
+    "example_en": "She listed all the items she needed to buy.",
+    "example_ko": "그녀는 사야 할 물건들을 모두 목록으로 작성했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lock",
+    "word": "lock",
+    "meaning": "잠그다",
+    "example_en": "Make sure to lock the door before you leave.",
+    "example_ko": "나가기 전에 문을 꼭 잠그세요.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "match",
+    "word": "match",
+    "meaning": "어울리다, 일치하다",
+    "example_en": "Her shoes matched her dress perfectly.",
+    "example_ko": "그녀의 신발은 원피스와 완벽하게 어울렸다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "melt",
+    "word": "melt",
+    "meaning": "녹다, 녹이다",
+    "example_en": "The ice cream melted quickly in the summer heat.",
+    "example_ko": "아이스크림이 여름 더위에 빠르게 녹았다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mix",
+    "word": "mix",
+    "meaning": "섞다",
+    "example_en": "Mix the flour and sugar together in a bowl.",
+    "example_ko": "밀가루와 설탕을 그릇에 함께 섞으세요.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nod",
+    "word": "nod",
+    "meaning": "고개를 끄덕이다",
+    "example_en": "He tends to nod when he agrees with something.",
+    "example_ko": "그는 어떤 것에 동의할 때 고개를 끄덕이는 경향이 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pack",
+    "word": "pack",
+    "meaning": "짐을 싸다, 포장하다",
+    "example_en": "She packed her suitcase the night before the trip.",
+    "example_ko": "그녀는 여행 전날 밤에 짐을 쌌다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pause",
+    "word": "pause",
+    "meaning": "잠시 멈추다",
+    "example_en": "He paused for a moment before answering the question.",
+    "example_ko": "그는 질문에 답하기 전에 잠시 멈췄다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "praise",
+    "word": "praise",
+    "meaning": "칭찬하다",
+    "example_en": "The teacher praised the students for their hard work.",
+    "example_ko": "선생님은 학생들의 노력을 칭찬했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "prefer",
+    "word": "prefer",
+    "meaning": "선호하다",
+    "example_en": "I prefer tea over coffee in the morning.",
+    "example_ko": "나는 아침에는 커피보다 차를 선호한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "advantage",
+    "word": "advantage",
+    "meaning": "장점, 이점",
+    "example_en": "Working from home has many advantages.",
+    "example_ko": "재택근무에는 여러 장점이 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "amount",
+    "word": "amount",
+    "meaning": "양, 총액",
+    "example_en": "A small amount of sugar makes the sauce taste better.",
+    "example_ko": "설탕을 소량 넣으면 소스 맛이 더 좋아진다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "appointment",
+    "word": "appointment",
+    "meaning": "약속, 예약",
+    "example_en": "I have a dentist appointment tomorrow morning.",
+    "example_ko": "나는 내일 아침에 치과 예약이 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "audience",
+    "word": "audience",
+    "meaning": "청중, 관객",
+    "example_en": "The audience clapped loudly after the performance.",
+    "example_ko": "공연이 끝난 후 관객들은 큰 박수를 보냈다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "background",
+    "word": "background",
+    "meaning": "배경, 경력",
+    "example_en": "She has a strong background in graphic design.",
+    "example_ko": "그녀는 그래픽 디자인 분야에서 탄탄한 경력을 가지고 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "benefit",
+    "word": "benefit",
+    "meaning": "혜택, 이익",
+    "example_en": "Regular exercise has many health benefits.",
+    "example_ko": "규칙적인 운동은 건강에 여러 가지 이점이 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "budget",
+    "word": "budget",
+    "meaning": "예산",
+    "example_en": "We need to stick to our monthly budget.",
+    "example_ko": "우리는 월별 예산을 지켜야 한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "career",
+    "word": "career",
+    "meaning": "경력, 직업",
+    "example_en": "She started her career as a junior reporter.",
+    "example_ko": "그녀는 신입 기자로 자신의 경력을 시작했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "chance",
+    "word": "chance",
+    "meaning": "기회, 가능성",
+    "example_en": "This job gives me a chance to travel abroad.",
+    "example_ko": "이 일은 나에게 해외로 나갈 기회를 준다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "client",
+    "word": "client",
+    "meaning": "고객, 의뢰인",
+    "example_en": "The lawyer met with a new client this afternoon.",
+    "example_ko": "그 변호사는 오늘 오후에 새로운 의뢰인을 만났다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "colleague",
+    "word": "colleague",
+    "meaning": "동료",
+    "example_en": "I had lunch with a colleague from the marketing team.",
+    "example_ko": "나는 마케팅 팀 동료와 점심을 먹었다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "community",
+    "word": "community",
+    "meaning": "공동체, 지역 사회",
+    "example_en": "The event brought the whole community together.",
+    "example_ko": "그 행사는 지역 사회 전체를 하나로 모았다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "company",
+    "word": "company",
+    "meaning": "회사, 동행",
+    "example_en": "He founded the company ten years ago.",
+    "example_ko": "그는 10년 전에 그 회사를 설립했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "condition",
+    "word": "condition",
+    "meaning": "상태, 조건",
+    "example_en": "The used car is in excellent condition.",
+    "example_ko": "그 중고차는 상태가 매우 좋다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "connection",
+    "word": "connection",
+    "meaning": "연결, 관계",
+    "example_en": "There's a strong connection between sleep and health.",
+    "example_ko": "수면과 건강 사이에는 밀접한 관계가 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "conversation",
+    "word": "conversation",
+    "meaning": "대화",
+    "example_en": "We had a long conversation about our future plans.",
+    "example_ko": "우리는 앞으로의 계획에 대해 긴 대화를 나눴다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cost",
+    "word": "cost",
+    "meaning": "비용",
+    "example_en": "The cost of living has risen sharply this year.",
+    "example_ko": "올해 생활비가 급격히 상승했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "culture",
+    "word": "culture",
+    "meaning": "문화",
+    "example_en": "Every country has its own unique culture.",
+    "example_ko": "모든 나라는 저마다 고유한 문화를 가지고 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "customer",
+    "word": "customer",
+    "meaning": "고객",
+    "example_en": "The store offers a discount to loyal customers.",
+    "example_ko": "그 매장은 단골 고객에게 할인을 제공한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "deadline",
+    "word": "deadline",
+    "meaning": "마감일, 마감 기한",
+    "example_en": "We have to submit the report before the deadline.",
+    "example_ko": "우리는 마감일 전에 보고서를 제출해야 한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "decision",
+    "word": "decision",
+    "meaning": "결정",
+    "example_en": "It was a difficult decision, but she made it alone.",
+    "example_ko": "어려운 결정이었지만 그녀는 혼자서 결정을 내렸다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "department",
+    "word": "department",
+    "meaning": "부서, 학과",
+    "example_en": "He transferred to the sales department last month.",
+    "example_ko": "그는 지난달에 영업 부서로 옮겼다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "device",
+    "word": "device",
+    "meaning": "장치, 기기",
+    "example_en": "This device helps you track your daily steps.",
+    "example_ko": "이 기기는 하루 걸음 수를 추적하는 데 도움을 준다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "difference",
+    "word": "difference",
+    "meaning": "차이",
+    "example_en": "There's a big difference between the two options.",
+    "example_ko": "그 두 선택지 사이에는 큰 차이가 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "direction",
+    "word": "direction",
+    "meaning": "방향, 지시",
+    "example_en": "He asked a stranger for directions to the museum.",
+    "example_ko": "그는 낯선 사람에게 박물관으로 가는 길을 물었다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "discount",
+    "word": "discount",
+    "meaning": "할인",
+    "example_en": "Students get a 20 percent discount at the museum.",
+    "example_ko": "학생들은 박물관에서 20퍼센트 할인을 받는다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "distance",
+    "word": "distance",
+    "meaning": "거리",
+    "example_en": "The distance between the two cities is about 300 kilometers.",
+    "example_ko": "그 두 도시 사이의 거리는 약 300킬로미터이다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "document",
+    "word": "document",
+    "meaning": "문서, 서류",
+    "example_en": "Please sign the document and return it by Friday.",
+    "example_ko": "금요일까지 그 서류에 서명해서 반환해 주세요.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "effort",
+    "word": "effort",
+    "meaning": "노력",
+    "example_en": "She put a lot of effort into the presentation.",
+    "example_ko": "그녀는 발표에 많은 노력을 기울였다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "employee",
+    "word": "employee",
+    "meaning": "직원",
+    "example_en": "The company gave every employee a small bonus.",
+    "example_ko": "그 회사는 모든 직원에게 소정의 보너스를 지급했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "environment",
+    "word": "environment",
+    "meaning": "환경",
+    "example_en": "The office has a friendly and relaxed environment.",
+    "example_ko": "그 사무실은 친근하고 편안한 환경을 갖추고 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "equipment",
+    "word": "equipment",
+    "meaning": "장비",
+    "example_en": "The gym has all the equipment you need to work out.",
+    "example_ko": "그 헬스장은 운동에 필요한 모든 장비를 갖추고 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "expert",
+    "word": "expert",
+    "meaning": "전문가",
+    "example_en": "An expert was called in to fix the machine.",
+    "example_ko": "기계를 고치기 위해 전문가가 불려 왔다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fashion",
+    "word": "fashion",
+    "meaning": "패션, 유행",
+    "example_en": "She works in the fashion industry as a designer.",
+    "example_ko": "그녀는 패션 업계에서 디자이너로 일한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fee",
+    "word": "fee",
+    "meaning": "요금, 수수료",
+    "example_en": "There's a small fee for using the parking lot.",
+    "example_ko": "주차장을 이용하는 데 소정의 요금이 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "field",
+    "word": "field",
+    "meaning": "분야, 들판",
+    "example_en": "She is well known in the field of medicine.",
+    "example_ko": "그녀는 의학 분야에서 잘 알려져 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "future",
+    "word": "future",
+    "meaning": "미래",
+    "example_en": "She is optimistic about the future of the company.",
+    "example_ko": "그녀는 회사의 미래에 대해 낙관적이다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "goal",
+    "word": "goal",
+    "meaning": "목표",
+    "example_en": "Our goal is to finish the project by March.",
+    "example_ko": "우리의 목표는 3월까지 그 프로젝트를 끝내는 것이다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "government",
+    "word": "government",
+    "meaning": "정부",
+    "example_en": "The government announced new support for farmers.",
+    "example_ko": "정부는 농민들을 위한 새로운 지원책을 발표했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "habit",
+    "word": "habit",
+    "meaning": "습관",
+    "example_en": "Drinking water first thing in the morning is a good habit.",
+    "example_ko": "아침에 일어나자마자 물을 마시는 것은 좋은 습관이다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "height",
+    "word": "height",
+    "meaning": "높이, 키",
+    "example_en": "The tower stands at an impressive height.",
+    "example_ko": "그 탑은 인상적인 높이로 서 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "history",
+    "word": "history",
+    "meaning": "역사",
+    "example_en": "The museum tells the history of the city.",
+    "example_ko": "그 박물관은 도시의 역사를 보여준다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hobby",
+    "word": "hobby",
+    "meaning": "취미",
+    "example_en": "Photography has become his favorite hobby.",
+    "example_ko": "사진 촬영은 그가 가장 좋아하는 취미가 되었다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "host",
+    "word": "host",
+    "meaning": "주최자, 진행자",
+    "example_en": "The host welcomed everyone with a warm smile.",
+    "example_ko": "그 진행자는 따뜻한 미소로 모두를 맞이했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "idea",
+    "word": "idea",
+    "meaning": "아이디어, 생각",
+    "example_en": "She came up with a great idea for the campaign.",
+    "example_ko": "그녀는 캠페인을 위한 훌륭한 아이디어를 떠올렸다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "image",
+    "word": "image",
+    "meaning": "이미지, 인상",
+    "example_en": "The company wants to improve its public image.",
+    "example_ko": "그 회사는 대중적 이미지를 개선하고 싶어 한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "industry",
+    "word": "industry",
+    "meaning": "산업",
+    "example_en": "The fashion industry changes quickly every season.",
+    "example_ko": "패션 산업은 계절마다 빠르게 변화한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ingredient",
+    "word": "ingredient",
+    "meaning": "재료, 성분",
+    "example_en": "Fresh ingredients make a big difference in cooking.",
+    "example_ko": "신선한 재료는 요리에서 큰 차이를 만든다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "interest",
+    "word": "interest",
+    "meaning": "관심, 이자",
+    "example_en": "She has always had an interest in old paintings.",
+    "example_ko": "그녀는 예전부터 옛 그림에 관심이 있었다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "issue",
+    "word": "issue",
+    "meaning": "문제, 쟁점",
+    "example_en": "We need to address this issue before it gets worse.",
+    "example_ko": "이 문제가 악화되기 전에 우리는 해결해야 한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "journey",
+    "word": "journey",
+    "meaning": "여정, 여행",
+    "example_en": "Learning a new language is a long journey.",
+    "example_ko": "새로운 언어를 배우는 것은 긴 여정이다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "label",
+    "word": "label",
+    "meaning": "라벨, 상표",
+    "example_en": "Always check the label before taking any medicine.",
+    "example_ko": "약을 복용하기 전에는 항상 라벨을 확인하세요.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lesson",
+    "word": "lesson",
+    "meaning": "교훈, 수업",
+    "example_en": "That mistake taught him an important lesson.",
+    "example_ko": "그 실수는 그에게 중요한 교훈을 주었다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "level",
+    "word": "level",
+    "meaning": "수준, 정도",
+    "example_en": "Her English level improved a lot this year.",
+    "example_ko": "그녀의 영어 수준은 올해 많이 향상되었다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "location",
+    "word": "location",
+    "meaning": "위치, 장소",
+    "example_en": "The restaurant's location makes it easy to find.",
+    "example_ko": "그 레스토랑은 위치가 좋아서 찾기 쉽다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "market",
+    "word": "market",
+    "meaning": "시장",
+    "example_en": "The company entered the Asian market last year.",
+    "example_ko": "그 회사는 작년에 아시아 시장에 진출했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "material",
+    "word": "material",
+    "meaning": "재료, 자료",
+    "example_en": "The jacket is made of recycled material.",
+    "example_ko": "그 재킷은 재활용 재료로 만들어졌다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "media",
+    "word": "media",
+    "meaning": "매체, 미디어",
+    "example_en": "Social media has changed how we get news.",
+    "example_ko": "소셜 미디어는 우리가 뉴스를 접하는 방식을 바꿔놓았다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "medicine",
+    "word": "medicine",
+    "meaning": "약, 의학",
+    "example_en": "Take this medicine twice a day after meals.",
+    "example_ko": "이 약은 하루에 두 번 식후에 복용하세요.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mistake",
+    "word": "mistake",
+    "meaning": "실수",
+    "example_en": "Everyone makes mistakes when they're learning something new.",
+    "example_ko": "누구나 새로운 것을 배울 때 실수를 한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mood",
+    "word": "mood",
+    "meaning": "기분, 분위기",
+    "example_en": "Music can really change your mood.",
+    "example_ko": "음악은 기분을 정말로 바꿔놓을 수 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "novel",
+    "word": "novel",
+    "meaning": "소설",
+    "example_en": "He is reading a novel set in the 1920s.",
+    "example_ko": "그는 1920년대를 배경으로 한 소설을 읽고 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "opinion",
+    "word": "opinion",
+    "meaning": "의견",
+    "example_en": "In my opinion, the new design looks much better.",
+    "example_ko": "내 생각에는 새 디자인이 훨씬 더 나아 보인다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "opportunity",
+    "word": "opportunity",
+    "meaning": "기회",
+    "example_en": "This internship is a great opportunity for students.",
+    "example_ko": "이 인턴십은 학생들에게 좋은 기회이다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "option",
+    "word": "option",
+    "meaning": "선택지, 옵션",
+    "example_en": "We have several options for the venue.",
+    "example_ko": "우리는 행사 장소에 대해 여러 선택지가 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "order",
+    "word": "order",
+    "meaning": "주문, 순서",
+    "example_en": "Your order will arrive within three business days.",
+    "example_ko": "주문하신 상품은 영업일 기준 3일 이내에 도착합니다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "owner",
+    "word": "owner",
+    "meaning": "주인, 소유주",
+    "example_en": "The restaurant owner greets every guest personally.",
+    "example_ko": "그 식당 주인은 손님 한 명 한 명을 직접 맞이한다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "partner",
+    "word": "partner",
+    "meaning": "파트너, 동업자",
+    "example_en": "He found a reliable business partner last year.",
+    "example_ko": "그는 작년에 믿을 만한 사업 파트너를 찾았다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "path",
+    "word": "path",
+    "meaning": "길, 경로",
+    "example_en": "We walked along a narrow path through the forest.",
+    "example_ko": "우리는 숲을 지나는 좁은 길을 따라 걸었다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "period",
+    "word": "period",
+    "meaning": "기간, 시기",
+    "example_en": "Sales usually rise during the holiday period.",
+    "example_ko": "연휴 기간에는 대개 매출이 오른다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "position",
+    "word": "position",
+    "meaning": "위치, 직위",
+    "example_en": "She was promoted to a senior position last year.",
+    "example_ko": "그녀는 작년에 고위직으로 승진했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "practice",
+    "word": "practice",
+    "meaning": "연습, 관행",
+    "example_en": "Regular practice is the key to learning a new skill.",
+    "example_ko": "꾸준한 연습이 새로운 기술을 배우는 핵심이다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "active",
+    "word": "active",
+    "meaning": "활동적인, 적극적인",
+    "example_en": "She stays active by cycling every weekend.",
+    "example_ko": "그녀는 주말마다 자전거를 타며 활동적으로 지낸다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ancient",
+    "word": "ancient",
+    "meaning": "고대의, 아주 오래된",
+    "example_en": "They visited an ancient temple during their trip.",
+    "example_ko": "그들은 여행 중에 고대 사원을 방문했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aware",
+    "word": "aware",
+    "meaning": "알고 있는, 인식하는",
+    "example_en": "She wasn't aware that the store had closed early.",
+    "example_ko": "그녀는 그 가게가 일찍 문을 닫았다는 것을 알지 못했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "brave",
+    "word": "brave",
+    "meaning": "용감한",
+    "example_en": "It was brave of her to speak up in the meeting.",
+    "example_ko": "그녀가 회의에서 소신 있게 말한 것은 용감한 일이었다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "brief",
+    "word": "brief",
+    "meaning": "간단한, 짧은",
+    "example_en": "He gave a brief summary of the project's progress.",
+    "example_ko": "그는 프로젝트 진행 상황에 대해 간단한 요약을 했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "calm",
+    "word": "calm",
+    "meaning": "차분한, 침착한",
+    "example_en": "She stayed calm even during the busiest hours.",
+    "example_ko": "그녀는 가장 바쁜 시간대에도 차분함을 유지했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cheap",
+    "word": "cheap",
+    "meaning": "저렴한, 값싼",
+    "example_en": "We found a cheap flight for our summer vacation.",
+    "example_ko": "우리는 여름휴가를 위한 저렴한 항공권을 찾았다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "clever",
+    "word": "clever",
+    "meaning": "영리한",
+    "example_en": "That was a clever way to solve the problem.",
+    "example_ko": "그것은 그 문제를 해결하는 영리한 방법이었다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "common",
+    "word": "common",
+    "meaning": "흔한, 공통의",
+    "example_en": "It's common to feel nervous before a big presentation.",
+    "example_ko": "큰 발표를 앞두고 긴장하는 것은 흔한 일이다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "confident",
+    "word": "confident",
+    "meaning": "자신감 있는",
+    "example_en": "She felt confident about the exam results.",
+    "example_ko": "그녀는 시험 결과에 대해 자신감을 느꼈다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "confused",
+    "word": "confused",
+    "meaning": "혼란스러운",
+    "example_en": "He looked confused by the new instructions.",
+    "example_ko": "그는 새로운 지시 사항에 혼란스러워 보였다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "convenient",
+    "word": "convenient",
+    "meaning": "편리한",
+    "example_en": "The new subway line is very convenient for commuters.",
+    "example_ko": "새로운 지하철 노선은 통근자들에게 매우 편리하다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "curious",
+    "word": "curious",
+    "meaning": "호기심 많은",
+    "example_en": "My son is curious about how things work.",
+    "example_ko": "내 아들은 사물이 어떻게 작동하는지에 대해 호기심이 많다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "current",
+    "word": "current",
+    "meaning": "현재의",
+    "example_en": "The current price is lower than last month's.",
+    "example_ko": "현재 가격은 지난달보다 낮다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dangerous",
+    "word": "dangerous",
+    "meaning": "위험한",
+    "example_en": "Driving in heavy fog can be very dangerous.",
+    "example_ko": "짙은 안개 속에서 운전하는 것은 매우 위험할 수 있다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "direct",
+    "word": "direct",
+    "meaning": "직접적인, 솔직한",
+    "example_en": "He gave a direct answer to the question.",
+    "example_ko": "그는 그 질문에 직접적인 답변을 했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "disappointed",
+    "word": "disappointed",
+    "meaning": "실망한",
+    "example_en": "She was disappointed by the movie's ending.",
+    "example_ko": "그녀는 그 영화의 결말에 실망했다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "embarrassed",
+    "word": "embarrassed",
+    "meaning": "당황스러운, 창피한",
+    "example_en": "He felt embarrassed when he tripped in front of everyone.",
+    "example_ko": "그는 모두 앞에서 넘어져서 당황스러웠다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "exact",
+    "word": "exact",
+    "meaning": "정확한",
+    "example_en": "I don't remember the exact time we arrived.",
+    "example_ko": "우리가 도착한 정확한 시간이 기억나지 않는다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "familiar",
+    "word": "familiar",
+    "meaning": "익숙한, 친숙한",
+    "example_en": "This street looks familiar to me.",
+    "example_ko": "이 거리는 나에게 낯익어 보인다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "absolutely",
+    "word": "absolutely",
+    "meaning": "전적으로, 완전히",
+    "example_en": "I absolutely agree with what you just said.",
+    "example_ko": "나는 네가 방금 한 말에 전적으로 동의해.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "actually",
+    "word": "actually",
+    "meaning": "실제로, 사실은",
+    "example_en": "I actually enjoyed the meeting more than I expected.",
+    "example_ko": "나는 사실 기대했던 것보다 회의를 더 즐겁게 보냈다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "immediately",
+    "word": "immediately",
+    "meaning": "즉시",
+    "example_en": "Please call me immediately if anything changes.",
+    "example_ko": "무언가 바뀌면 즉시 전화해 주세요.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rarely",
+    "word": "rarely",
+    "meaning": "좀처럼 ~않는, 드물게",
+    "example_en": "He rarely eats fast food these days.",
+    "example_ko": "그는 요즘 패스트푸드를 거의 먹지 않는다.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "accomplish",
+    "word": "accomplish",
+    "meaning": "완수하다, 해내다",
+    "example_en": "We accomplished the project ahead of schedule.",
+    "example_ko": "우리는 일정보다 앞서 프로젝트를 완수했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "adapt",
+    "word": "adapt",
+    "meaning": "적응하다",
+    "example_en": "It took him a while to adapt to the new city.",
+    "example_ko": "그는 새로운 도시에 적응하는 데 시간이 걸렸다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "assume",
+    "word": "assume",
+    "meaning": "가정하다, 추정하다",
+    "example_en": "Let's not assume anything until we have the facts.",
+    "example_ko": "사실을 알기 전까지는 아무것도 추정하지 말자.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "compare",
+    "word": "compare",
+    "meaning": "비교하다",
+    "example_en": "It's hard to compare the two products fairly.",
+    "example_ko": "두 제품을 공정하게 비교하기는 어렵다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "confirm",
+    "word": "confirm",
+    "meaning": "확인하다",
+    "example_en": "Please confirm your reservation by email.",
+    "example_ko": "이메일로 예약을 확인해 주세요.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "consider",
+    "word": "consider",
+    "meaning": "고려하다",
+    "example_en": "We should consider all the options before deciding.",
+    "example_ko": "결정하기 전에 모든 선택지를 고려해야 한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "convince",
+    "word": "convince",
+    "meaning": "설득하다, 확신시키다",
+    "example_en": "She convinced me to try the new restaurant.",
+    "example_ko": "그녀는 나에게 새로운 식당에 가보라고 설득했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "discover",
+    "word": "discover",
+    "meaning": "발견하다",
+    "example_en": "Scientists discovered a new species in the forest.",
+    "example_ko": "과학자들은 숲에서 새로운 종을 발견했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "encourage",
+    "word": "encourage",
+    "meaning": "격려하다, 장려하다",
+    "example_en": "My teacher encouraged me to keep writing.",
+    "example_ko": "선생님은 나에게 계속 글을 쓰라고 격려해 주셨다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ensure",
+    "word": "ensure",
+    "meaning": "보장하다, 확실히 하다",
+    "example_en": "Please ensure the door is locked before you leave.",
+    "example_ko": "나가기 전에 문이 잠겨 있는지 확인해 주세요.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "estimate",
+    "word": "estimate",
+    "meaning": "추정하다, 견적을 내다",
+    "example_en": "The mechanic estimated the repair would cost $200.",
+    "example_ko": "정비사는 수리 비용이 200달러 정도 들 것이라고 추정했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "experience",
+    "word": "experience",
+    "meaning": "경험하다",
+    "example_en": "Living abroad helped her experience new cultures.",
+    "example_ko": "해외에서 사는 것은 그녀가 새로운 문화를 경험하도록 도왔다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "express",
+    "word": "express",
+    "meaning": "표현하다",
+    "example_en": "It's important to express your feelings honestly.",
+    "example_ko": "자신의 감정을 솔직하게 표현하는 것이 중요하다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "handle",
+    "word": "handle",
+    "meaning": "다루다, 처리하다",
+    "example_en": "She handled the difficult situation very calmly.",
+    "example_ko": "그녀는 그 어려운 상황을 매우 침착하게 처리했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "hesitate",
+    "word": "hesitate",
+    "meaning": "망설이다",
+    "example_en": "Don't hesitate to call me if you need anything.",
+    "example_ko": "필요한 게 있으면 망설이지 말고 전화하세요.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "identify",
+    "word": "identify",
+    "meaning": "확인하다, 식별하다",
+    "example_en": "The doctor identified the cause of the pain.",
+    "example_ko": "의사는 통증의 원인을 확인했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "influence",
+    "word": "influence",
+    "meaning": "영향을 미치다",
+    "example_en": "Social media can influence how people think.",
+    "example_ko": "소셜 미디어는 사람들의 생각에 영향을 줄 수 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "inform",
+    "word": "inform",
+    "meaning": "알리다, 통지하다",
+    "example_en": "Please inform us if your address changes.",
+    "example_ko": "주소가 바뀌면 저희에게 알려 주세요.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "organize",
+    "word": "organize",
+    "meaning": "조직하다, 정리하다",
+    "example_en": "We need to organize the files before the audit.",
+    "example_ko": "감사 전에 파일을 정리해야 한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "allow",
+    "word": "allow",
+    "meaning": "허락하다, 허용하다",
+    "example_en": "The teacher allowed the students to leave early.",
+    "example_ko": "선생님은 학생들이 일찍 가는 것을 허락했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "apologize",
+    "word": "apologize",
+    "meaning": "사과하다",
+    "example_en": "He apologized for being late to the meeting.",
+    "example_ko": "그는 회의에 늦은 것에 대해 사과했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "appear",
+    "word": "appear",
+    "meaning": "나타나다, ~인 것 같다",
+    "example_en": "The bus suddenly appeared around the corner.",
+    "example_ko": "버스가 갑자기 모퉁이에서 나타났다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "apply",
+    "word": "apply",
+    "meaning": "지원하다, 적용하다",
+    "example_en": "I applied for three different jobs last week.",
+    "example_ko": "나는 지난주에 서로 다른 세 곳에 지원했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "argue",
+    "word": "argue",
+    "meaning": "논쟁하다, 주장하다",
+    "example_en": "They argued about who should pay the bill.",
+    "example_ko": "그들은 누가 계산을 해야 하는지를 두고 다퉜다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "arrange",
+    "word": "arrange",
+    "meaning": "준비하다, 배열하다",
+    "example_en": "We arranged to meet at the cafe at noon.",
+    "example_ko": "우리는 정오에 카페에서 만나기로 약속을 정했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "arrive",
+    "word": "arrive",
+    "meaning": "도착하다",
+    "example_en": "The train arrived at the station on time.",
+    "example_ko": "기차는 제시간에 역에 도착했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "attend",
+    "word": "attend",
+    "meaning": "참석하다",
+    "example_en": "He couldn't attend the meeting due to a schedule conflict.",
+    "example_ko": "그는 일정이 겹쳐서 회의에 참석할 수 없었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "begin",
+    "word": "begin",
+    "meaning": "시작하다",
+    "example_en": "The concert will begin at eight o'clock.",
+    "example_ko": "콘서트는 8시에 시작할 것이다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "believe",
+    "word": "believe",
+    "meaning": "믿다",
+    "example_en": "I believe that everything happens for a reason.",
+    "example_ko": "나는 모든 일에는 이유가 있다고 믿는다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "belong",
+    "word": "belong",
+    "meaning": "속하다, ~의 것이다",
+    "example_en": "This book belongs to my sister.",
+    "example_ko": "이 책은 내 여동생의 것이다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "bother",
+    "word": "bother",
+    "meaning": "신경 쓰다, 귀찮게 하다",
+    "example_en": "Sorry to bother you, but could I ask a question?",
+    "example_ko": "귀찮게 해서 죄송한데, 질문 하나 해도 될까요?",
+    "difficulty": "medium"
+  },
+  {
+    "id": "build",
+    "word": "build",
+    "meaning": "짓다, 세우다",
+    "example_en": "The city plans to build a new bridge downtown.",
+    "example_ko": "시는 시내에 새 다리를 지을 계획이다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "boost",
+    "word": "boost",
+    "meaning": "북돋우다, 신장시키다",
+    "example_en": "The discount helped boost weekend sales.",
+    "example_ko": "할인 행사가 주말 매출을 끌어올리는 데 도움이 되었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "celebrate",
+    "word": "celebrate",
+    "meaning": "축하하다, 기념하다",
+    "example_en": "We celebrated our anniversary at a nice restaurant.",
+    "example_ko": "우리는 좋은 레스토랑에서 기념일을 축하했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "challenge",
+    "word": "challenge",
+    "meaning": "도전하다, 이의를 제기하다",
+    "example_en": "She challenged herself to run a marathon this year.",
+    "example_ko": "그녀는 올해 마라톤을 완주하는 것에 도전했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "check",
+    "word": "check",
+    "meaning": "확인하다, 점검하다",
+    "example_en": "Please check your email for the confirmation message.",
+    "example_ko": "확인 메시지를 위해 이메일을 확인해 주세요.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "choose",
+    "word": "choose",
+    "meaning": "선택하다",
+    "example_en": "It's hard to choose between the two options.",
+    "example_ko": "두 선택지 중에서 고르기가 어렵다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "clean",
+    "word": "clean",
+    "meaning": "청소하다, 깨끗한",
+    "example_en": "We cleaned the whole house before the guests arrived.",
+    "example_ko": "우리는 손님이 오기 전에 집 전체를 청소했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "clear",
+    "word": "clear",
+    "meaning": "치우다, 명확한",
+    "example_en": "Please clear the table before we start dinner.",
+    "example_ko": "저녁을 시작하기 전에 식탁을 좀 치워 주세요.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "climb",
+    "word": "climb",
+    "meaning": "오르다, 등반하다",
+    "example_en": "They climbed the mountain despite the bad weather.",
+    "example_ko": "그들은 궂은 날씨에도 불구하고 산을 올랐다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "close",
+    "word": "close",
+    "meaning": "닫다, 마감하다",
+    "example_en": "The store closes at nine every night.",
+    "example_ko": "그 가게는 매일 밤 9시에 문을 닫는다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "collect",
+    "word": "collect",
+    "meaning": "모으다, 수집하다",
+    "example_en": "She collects stamps from different countries.",
+    "example_ko": "그녀는 여러 나라의 우표를 수집한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "connect",
+    "word": "connect",
+    "meaning": "연결하다",
+    "example_en": "This app connects you with local freelancers.",
+    "example_ko": "이 앱은 사용자를 지역 프리랜서와 연결해 준다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "contain",
+    "word": "contain",
+    "meaning": "포함하다, 담고 있다",
+    "example_en": "This drink contains a lot of sugar.",
+    "example_ko": "이 음료에는 설탕이 많이 들어 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cope",
+    "word": "cope",
+    "meaning": "대처하다, 견디다",
+    "example_en": "She learned to cope with stress through exercise.",
+    "example_ko": "그녀는 운동을 통해 스트레스에 대처하는 법을 배웠다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "correct",
+    "word": "correct",
+    "meaning": "바로잡다, 정확한",
+    "example_en": "The teacher corrected our pronunciation mistakes.",
+    "example_ko": "선생님은 우리의 발음 실수를 바로잡아 주었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "count",
+    "word": "count",
+    "meaning": "세다, 중요하다",
+    "example_en": "Every vote counts in a close election.",
+    "example_ko": "접전인 선거에서는 표 하나하나가 중요하다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "create",
+    "word": "create",
+    "meaning": "창조하다, 만들다",
+    "example_en": "The team created a new app in just two weeks.",
+    "example_ko": "그 팀은 단 2주 만에 새로운 앱을 만들었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cross",
+    "word": "cross",
+    "meaning": "건너다, 가로지르다",
+    "example_en": "Look both ways before you cross the street.",
+    "example_ko": "길을 건너기 전에 양쪽을 살펴보세요.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cut",
+    "word": "cut",
+    "meaning": "자르다, 줄이다",
+    "example_en": "The company cut its prices by ten percent.",
+    "example_ko": "그 회사는 가격을 10퍼센트 인하했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dance",
+    "word": "dance",
+    "meaning": "춤추다",
+    "example_en": "They danced together at their friend's wedding.",
+    "example_ko": "그들은 친구의 결혼식에서 함께 춤을 췄다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "deal",
+    "word": "deal",
+    "meaning": "다루다, 거래",
+    "example_en": "We need to deal with this issue right away.",
+    "example_ko": "우리는 이 문제를 즉시 처리해야 한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "decorate",
+    "word": "decorate",
+    "meaning": "장식하다, 꾸미다",
+    "example_en": "We decorated the office for the holiday party.",
+    "example_ko": "우리는 연말 파티를 위해 사무실을 꾸몄다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "design",
+    "word": "design",
+    "meaning": "설계하다, 디자인하다",
+    "example_en": "She designs websites for small businesses.",
+    "example_ko": "그녀는 소규모 사업체를 위한 웹사이트를 디자인한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "develop",
+    "word": "develop",
+    "meaning": "개발하다, 발전시키다",
+    "example_en": "The company is developing a new mobile app.",
+    "example_ko": "그 회사는 새로운 모바일 앱을 개발하고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "disagree",
+    "word": "disagree",
+    "meaning": "동의하지 않다",
+    "example_en": "I have to disagree with your assessment.",
+    "example_ko": "나는 당신의 평가에 동의할 수 없다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "disappear",
+    "word": "disappear",
+    "meaning": "사라지다",
+    "example_en": "The cat disappeared into the bushes.",
+    "example_ko": "고양이는 덤불 속으로 사라졌다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "display",
+    "word": "display",
+    "meaning": "전시하다, 나타내다",
+    "example_en": "The museum displays artwork from local artists.",
+    "example_ko": "그 박물관은 지역 예술가들의 작품을 전시한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "divide",
+    "word": "divide",
+    "meaning": "나누다, 분할하다",
+    "example_en": "We divided the work among the four of us.",
+    "example_ko": "우리는 우리 넷이서 일을 나누었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "doubt",
+    "word": "doubt",
+    "meaning": "의심하다",
+    "example_en": "I doubt he will finish the project on time.",
+    "example_ko": "나는 그가 제시간에 프로젝트를 끝낼지 의심스럽다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "drag",
+    "word": "drag",
+    "meaning": "끌다, 끌고 가다",
+    "example_en": "He dragged the heavy suitcase across the airport.",
+    "example_ko": "그는 무거운 여행 가방을 공항을 가로질러 끌고 갔다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "equip",
+    "word": "equip",
+    "meaning": "장비를 갖추다",
+    "example_en": "The kitchen is equipped with modern appliances.",
+    "example_ko": "그 주방은 최신 가전제품을 갖추고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "escape",
+    "word": "escape",
+    "meaning": "탈출하다, 벗어나다",
+    "example_en": "They escaped the city for a quiet weekend in the mountains.",
+    "example_ko": "그들은 조용한 주말을 보내기 위해 도시를 벗어나 산으로 갔다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "establish",
+    "word": "establish",
+    "meaning": "설립하다, 확립하다",
+    "example_en": "The company was established in 1998.",
+    "example_ko": "그 회사는 1998년에 설립되었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "examine",
+    "word": "examine",
+    "meaning": "검토하다, 진찰하다",
+    "example_en": "The doctor examined the patient carefully.",
+    "example_ko": "의사는 환자를 꼼꼼히 진찰했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "exist",
+    "word": "exist",
+    "meaning": "존재하다",
+    "example_en": "Many small businesses exist because of local support.",
+    "example_ko": "많은 소규모 사업체는 지역 사회의 지원 덕분에 존재한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "force",
+    "word": "force",
+    "meaning": "강요하다, 힘",
+    "example_en": "The heavy rain forced us to cancel the picnic.",
+    "example_ko": "폭우 때문에 우리는 어쩔 수 없이 소풍을 취소했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "guarantee",
+    "word": "guarantee",
+    "meaning": "보장하다",
+    "example_en": "The store guarantees a full refund within 30 days.",
+    "example_ko": "그 매장은 30일 이내 전액 환불을 보장한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "interrupt",
+    "word": "interrupt",
+    "meaning": "방해하다, 끼어들다",
+    "example_en": "Sorry to interrupt, but there's a call for you.",
+    "example_ko": "방해해서 죄송한데, 전화가 와 있어요.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "judge",
+    "word": "judge",
+    "meaning": "판단하다, 심사하다",
+    "example_en": "Don't judge a book by its cover.",
+    "example_ko": "겉모습만 보고 판단하지 마라.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lack",
+    "word": "lack",
+    "meaning": "부족하다, 결핍",
+    "example_en": "The project failed because it lacked proper planning.",
+    "example_ko": "그 프로젝트는 제대로 된 계획이 부족해서 실패했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "launch",
+    "word": "launch",
+    "meaning": "출시하다, 시작하다",
+    "example_en": "The company launched a new product last week.",
+    "example_ko": "그 회사는 지난주에 새 제품을 출시했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lean",
+    "word": "lean",
+    "meaning": "기대다, 기울다",
+    "example_en": "He leaned against the wall while waiting.",
+    "example_ko": "그는 기다리는 동안 벽에 기대어 있었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "occupy",
+    "word": "occupy",
+    "meaning": "차지하다, 점유하다",
+    "example_en": "The desk occupies most of the small room.",
+    "example_ko": "그 책상은 그 작은 방의 대부분을 차지한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "overcome",
+    "word": "overcome",
+    "meaning": "극복하다",
+    "example_en": "She overcame her fear of public speaking.",
+    "example_ko": "그녀는 대중 앞에서 말하는 두려움을 극복했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "owe",
+    "word": "owe",
+    "meaning": "빚지다, 신세를 지다",
+    "example_en": "I still owe him twenty dollars from last week.",
+    "example_ko": "나는 지난주에 그에게 빌린 20달러를 아직 갚지 못했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "participate",
+    "word": "participate",
+    "meaning": "참여하다",
+    "example_en": "Everyone was encouraged to participate in the discussion.",
+    "example_ko": "모두가 토론에 참여하도록 독려받았다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "disadvantage",
+    "word": "disadvantage",
+    "meaning": "단점, 불리한 점",
+    "example_en": "The main disadvantage of the plan is its high cost.",
+    "example_ko": "그 계획의 가장 큰 단점은 비용이 많이 든다는 것이다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "reputation",
+    "word": "reputation",
+    "meaning": "평판, 명성",
+    "example_en": "The restaurant has a good reputation for fresh seafood.",
+    "example_ko": "그 레스토랑은 신선한 해산물로 좋은 평판을 얻고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "conclusion",
+    "word": "conclusion",
+    "meaning": "결론",
+    "example_en": "We reached the conclusion that the plan wouldn't work.",
+    "example_ko": "우리는 그 계획이 효과가 없을 것이라는 결론에 도달했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "detail",
+    "word": "detail",
+    "meaning": "세부 사항",
+    "example_en": "Please check every detail before sending the invoice.",
+    "example_ko": "청구서를 보내기 전에 모든 세부 사항을 확인해 주세요.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "era",
+    "word": "era",
+    "meaning": "시대",
+    "example_en": "We are living in the era of artificial intelligence.",
+    "example_ko": "우리는 인공지능의 시대에 살고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "evidence",
+    "word": "evidence",
+    "meaning": "증거",
+    "example_en": "There is no evidence to support that claim.",
+    "example_ko": "그 주장을 뒷받침할 증거가 없다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "feature",
+    "word": "feature",
+    "meaning": "특징, 기능",
+    "example_en": "The new phone has an interesting camera feature.",
+    "example_ko": "그 새 휴대폰은 흥미로운 카메라 기능을 갖고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "figure",
+    "word": "figure",
+    "meaning": "수치, 인물",
+    "example_en": "The sales figures were higher than expected.",
+    "example_ko": "매출 수치가 예상보다 높았다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fortune",
+    "word": "fortune",
+    "meaning": "운, 재산",
+    "example_en": "He made a fortune selling handmade furniture.",
+    "example_ko": "그는 수제 가구를 팔아 큰돈을 벌었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "function",
+    "word": "function",
+    "meaning": "기능, 역할",
+    "example_en": "This button has more than one function.",
+    "example_ko": "이 버튼은 하나 이상의 기능을 가지고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fund",
+    "word": "fund",
+    "meaning": "기금, 자금",
+    "example_en": "The city set up a fund to help small businesses.",
+    "example_ko": "시는 소규모 사업체를 돕기 위해 기금을 조성했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gap",
+    "word": "gap",
+    "meaning": "격차, 틈",
+    "example_en": "There's a growing gap between the two generations.",
+    "example_ko": "두 세대 사이의 격차가 점점 커지고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "generation",
+    "word": "generation",
+    "meaning": "세대",
+    "example_en": "This recipe has been passed down for generations.",
+    "example_ko": "이 요리법은 여러 세대에 걸쳐 전해져 왔다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "growth",
+    "word": "growth",
+    "meaning": "성장",
+    "example_en": "The company saw steady growth over the past year.",
+    "example_ko": "그 회사는 지난 한 해 동안 꾸준한 성장을 보였다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "headline",
+    "word": "headline",
+    "meaning": "헤드라인, 표제",
+    "example_en": "The story made headlines across the country.",
+    "example_ko": "그 이야기는 전국적으로 헤드라인을 장식했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "honor",
+    "word": "honor",
+    "meaning": "명예, 영광",
+    "example_en": "It was a great honor to receive the award.",
+    "example_ko": "그 상을 받은 것은 큰 영광이었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "impression",
+    "word": "impression",
+    "meaning": "인상",
+    "example_en": "He made a good impression during the interview.",
+    "example_ko": "그는 면접에서 좋은 인상을 남겼다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "income",
+    "word": "income",
+    "meaning": "소득, 수입",
+    "example_en": "Her income increased after she changed jobs.",
+    "example_ko": "그녀는 이직 후 소득이 늘었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "individual",
+    "word": "individual",
+    "meaning": "개인",
+    "example_en": "Each individual has different needs and goals.",
+    "example_ko": "각 개인은 저마다 다른 필요와 목표를 가지고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "instruction",
+    "word": "instruction",
+    "meaning": "지시, 설명서",
+    "example_en": "Follow the instructions carefully to assemble the desk.",
+    "example_ko": "책상을 조립하려면 설명서를 주의 깊게 따르세요.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "insurance",
+    "word": "insurance",
+    "meaning": "보험",
+    "example_en": "He bought travel insurance before the trip.",
+    "example_ko": "그는 여행을 떠나기 전에 여행자 보험에 가입했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "invention",
+    "word": "invention",
+    "meaning": "발명, 발명품",
+    "example_en": "The washing machine was a life-changing invention.",
+    "example_ko": "세탁기는 삶을 바꾼 발명품이었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "investment",
+    "word": "investment",
+    "meaning": "투자",
+    "example_en": "Buying a house can be a good long-term investment.",
+    "example_ko": "집을 사는 것은 좋은 장기 투자가 될 수 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "knowledge",
+    "word": "knowledge",
+    "meaning": "지식",
+    "example_en": "He has deep knowledge of local history.",
+    "example_ko": "그는 지역 역사에 대해 깊은 지식을 가지고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "landscape",
+    "word": "landscape",
+    "meaning": "풍경, 지형",
+    "example_en": "The painting shows a beautiful mountain landscape.",
+    "example_ko": "그 그림은 아름다운 산악 풍경을 보여준다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "license",
+    "word": "license",
+    "meaning": "면허, 자격증",
+    "example_en": "He got his driver's license last summer.",
+    "example_ko": "그는 지난여름에 운전면허를 취득했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "loss",
+    "word": "loss",
+    "meaning": "손실, 상실",
+    "example_en": "The company reported a small loss last quarter.",
+    "example_ko": "그 회사는 지난 분기에 소폭의 손실을 보고했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "majority",
+    "word": "majority",
+    "meaning": "대다수, 과반수",
+    "example_en": "The majority of employees prefer flexible hours.",
+    "example_ko": "대다수의 직원들은 유연 근무 시간을 선호한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "manner",
+    "word": "manner",
+    "meaning": "방식, 태도",
+    "example_en": "He handled the complaint in a calm manner.",
+    "example_ko": "그는 그 불만을 차분한 태도로 처리했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "method",
+    "word": "method",
+    "meaning": "방법",
+    "example_en": "They developed a new method to reduce waste.",
+    "example_ko": "그들은 낭비를 줄이기 위한 새로운 방법을 개발했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mission",
+    "word": "mission",
+    "meaning": "임무, 사명",
+    "example_en": "The company's mission is to make education accessible.",
+    "example_ko": "그 회사의 사명은 교육을 누구나 접할 수 있게 만드는 것이다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "movement",
+    "word": "movement",
+    "meaning": "움직임, 운동",
+    "example_en": "The environmental movement has gained more support recently.",
+    "example_ko": "환경 운동은 최근 더 많은 지지를 얻고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "network",
+    "word": "network",
+    "meaning": "네트워크, 인맥",
+    "example_en": "She built a strong professional network over the years.",
+    "example_ko": "그녀는 수년에 걸쳐 탄탄한 인맥을 쌓았다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nutrition",
+    "word": "nutrition",
+    "meaning": "영양",
+    "example_en": "Good nutrition is important for children's growth.",
+    "example_ko": "좋은 영양 섭취는 아이들의 성장에 중요하다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "occasion",
+    "word": "occasion",
+    "meaning": "경우, 행사",
+    "example_en": "We saved the good wine for a special occasion.",
+    "example_ko": "우리는 좋은 와인을 특별한 날을 위해 아껴두었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "organization",
+    "word": "organization",
+    "meaning": "조직, 단체",
+    "example_en": "She works for a nonprofit organization.",
+    "example_ko": "그녀는 비영리 단체에서 일한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "outcome",
+    "word": "outcome",
+    "meaning": "결과",
+    "example_en": "The outcome of the meeting was better than expected.",
+    "example_ko": "그 회의의 결과는 예상보다 좋았다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pace",
+    "word": "pace",
+    "meaning": "속도, 페이스",
+    "example_en": "He set a fast pace at the start of the race.",
+    "example_ko": "그는 경주 초반에 빠른 속도를 냈다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "participant",
+    "word": "participant",
+    "meaning": "참가자",
+    "example_en": "Each participant received a certificate at the end.",
+    "example_ko": "각 참가자는 마지막에 수료증을 받았다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "passion",
+    "word": "passion",
+    "meaning": "열정",
+    "example_en": "She has a real passion for teaching children.",
+    "example_ko": "그녀는 아이들을 가르치는 것에 진정한 열정을 가지고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pattern",
+    "word": "pattern",
+    "meaning": "패턴, 양식",
+    "example_en": "There's a clear pattern in customer complaints this month.",
+    "example_ko": "이번 달 고객 불만에는 뚜렷한 패턴이 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "percentage",
+    "word": "percentage",
+    "meaning": "비율, 백분율",
+    "example_en": "Only a small percentage of applicants get an interview.",
+    "example_ko": "지원자 중 소수만이 면접 기회를 얻는다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "performance",
+    "word": "performance",
+    "meaning": "성과, 공연",
+    "example_en": "The team's performance improved after the new training.",
+    "example_ko": "새로운 교육 이후 팀의 성과가 향상되었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "personality",
+    "word": "personality",
+    "meaning": "성격",
+    "example_en": "She has a warm and outgoing personality.",
+    "example_ko": "그녀는 따뜻하고 외향적인 성격을 가지고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "phase",
+    "word": "phase",
+    "meaning": "단계",
+    "example_en": "The project is now in its final phase.",
+    "example_ko": "그 프로젝트는 이제 마지막 단계에 접어들었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "plot",
+    "word": "plot",
+    "meaning": "줄거리, 구성",
+    "example_en": "The movie has a simple but touching plot.",
+    "example_ko": "그 영화는 단순하지만 감동적인 줄거리를 가지고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "policy",
+    "word": "policy",
+    "meaning": "정책",
+    "example_en": "The company updated its return policy last month.",
+    "example_ko": "그 회사는 지난달에 반품 정책을 업데이트했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "population",
+    "word": "population",
+    "meaning": "인구",
+    "example_en": "The city's population has doubled in twenty years.",
+    "example_ko": "그 도시의 인구는 20년 만에 두 배로 늘었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "portion",
+    "word": "portion",
+    "meaning": "부분, 몫",
+    "example_en": "He ate only a small portion of the meal.",
+    "example_ko": "그는 음식의 일부만 조금 먹었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "possibility",
+    "word": "possibility",
+    "meaning": "가능성",
+    "example_en": "There's a possibility of rain later this evening.",
+    "example_ko": "오늘 저녁 늦게 비가 올 가능성이 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pressure",
+    "word": "pressure",
+    "meaning": "압박, 압력",
+    "example_en": "She works well even under a lot of pressure.",
+    "example_ko": "그녀는 많은 압박 속에서도 일을 잘 해낸다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "priority",
+    "word": "priority",
+    "meaning": "우선순위",
+    "example_en": "Safety should always be our top priority.",
+    "example_ko": "안전은 항상 우리의 최우선 순위여야 한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "process",
+    "word": "process",
+    "meaning": "과정, 절차",
+    "example_en": "The hiring process usually takes about two weeks.",
+    "example_ko": "채용 절차는 보통 2주 정도 걸린다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "accurate",
+    "word": "accurate",
+    "meaning": "정확한",
+    "example_en": "The weather forecast was surprisingly accurate today.",
+    "example_ko": "오늘 일기예보는 놀랍도록 정확했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aggressive",
+    "word": "aggressive",
+    "meaning": "공격적인",
+    "example_en": "The company took an aggressive approach to marketing.",
+    "example_ko": "그 회사는 마케팅에 공격적인 방식을 취했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "alert",
+    "word": "alert",
+    "meaning": "기민한, 경계하는",
+    "example_en": "Drivers should stay alert on icy roads.",
+    "example_ko": "운전자들은 빙판길에서 항상 경계를 늦추지 말아야 한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ambitious",
+    "word": "ambitious",
+    "meaning": "야심 찬",
+    "example_en": "He set an ambitious goal to double sales this year.",
+    "example_ko": "그는 올해 매출을 두 배로 늘리겠다는 야심 찬 목표를 세웠다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "anxious",
+    "word": "anxious",
+    "meaning": "불안한, 걱정하는",
+    "example_en": "She felt anxious before her first job interview.",
+    "example_ko": "그녀는 첫 면접을 앞두고 불안했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "appropriate",
+    "word": "appropriate",
+    "meaning": "적절한",
+    "example_en": "Please wear appropriate clothes for the interview.",
+    "example_ko": "면접에는 적절한 복장을 착용해 주세요.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "artificial",
+    "word": "artificial",
+    "meaning": "인공의, 인위적인",
+    "example_en": "The drink is made without any artificial flavors.",
+    "example_ko": "그 음료는 어떤 인공 향료도 넣지 않고 만들어졌다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ashamed",
+    "word": "ashamed",
+    "meaning": "부끄러운, 창피한",
+    "example_en": "He felt ashamed after forgetting his friend's birthday.",
+    "example_ko": "그는 친구의 생일을 잊어버려서 부끄러웠다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "awkward",
+    "word": "awkward",
+    "meaning": "어색한",
+    "example_en": "There was an awkward silence after his joke.",
+    "example_ko": "그의 농담 이후 어색한 침묵이 흘렀다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "broad",
+    "word": "broad",
+    "meaning": "넓은, 광범위한",
+    "example_en": "The company offers a broad range of services.",
+    "example_ko": "그 회사는 광범위한 서비스를 제공한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "capable",
+    "word": "capable",
+    "meaning": "능력 있는, ~할 수 있는",
+    "example_en": "He is fully capable of handling this project alone.",
+    "example_ko": "그는 이 프로젝트를 혼자서 충분히 감당할 능력이 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "careless",
+    "word": "careless",
+    "meaning": "부주의한",
+    "example_en": "The mistake was caused by a careless error.",
+    "example_ko": "그 실수는 부주의한 오류에서 비롯되었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cautious",
+    "word": "cautious",
+    "meaning": "신중한, 조심스러운",
+    "example_en": "Investors are being cautious about the stock market.",
+    "example_ko": "투자자들은 주식 시장에 대해 신중한 태도를 보이고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "competitive",
+    "word": "competitive",
+    "meaning": "경쟁력 있는, 경쟁이 치열한",
+    "example_en": "The job market has become very competitive lately.",
+    "example_ko": "최근 취업 시장은 매우 경쟁이 치열해졌다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "complex",
+    "word": "complex",
+    "meaning": "복잡한",
+    "example_en": "The instructions were too complex for beginners.",
+    "example_ko": "그 설명서는 초보자에게 너무 복잡했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "consistent",
+    "word": "consistent",
+    "meaning": "일관된, 꾸준한",
+    "example_en": "Her grades have been consistent throughout the semester.",
+    "example_ko": "그녀의 성적은 학기 내내 꾸준했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "constant",
+    "word": "constant",
+    "meaning": "지속적인, 끊임없는",
+    "example_en": "The city has seen constant growth over the past decade.",
+    "example_ko": "그 도시는 지난 10년간 지속적인 성장을 보였다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "decent",
+    "word": "decent",
+    "meaning": "괜찮은, 품위 있는",
+    "example_en": "They offered him a decent salary for the position.",
+    "example_ko": "그들은 그 직위에 대해 그에게 괜찮은 급여를 제안했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "detailed",
+    "word": "detailed",
+    "meaning": "상세한",
+    "example_en": "She gave a detailed explanation of the process.",
+    "example_ko": "그녀는 그 과정에 대해 상세한 설명을 해주었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "diverse",
+    "word": "diverse",
+    "meaning": "다양한",
+    "example_en": "The company has a diverse team from many countries.",
+    "example_ko": "그 회사는 여러 나라 출신으로 구성된 다양한 팀을 가지고 있다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dramatic",
+    "word": "dramatic",
+    "meaning": "극적인",
+    "example_en": "There was a dramatic increase in ticket sales.",
+    "example_ko": "티켓 판매량에 극적인 증가가 있었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "eager",
+    "word": "eager",
+    "meaning": "열망하는, 간절히 바라는",
+    "example_en": "The new intern is eager to learn everything.",
+    "example_ko": "그 신입 인턴은 모든 것을 배우고 싶어 한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "effective",
+    "word": "effective",
+    "meaning": "효과적인",
+    "example_en": "This is a simple but effective way to save money.",
+    "example_ko": "이것은 간단하지만 효과적인 절약 방법이다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "efficient",
+    "word": "efficient",
+    "meaning": "효율적인",
+    "example_en": "The new system is much more efficient than the old one.",
+    "example_ko": "새 시스템은 예전 것보다 훨씬 효율적이다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "elegant",
+    "word": "elegant",
+    "meaning": "우아한",
+    "example_en": "She wore an elegant dress to the dinner party.",
+    "example_ko": "그녀는 저녁 파티에 우아한 드레스를 입고 왔다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "emotional",
+    "word": "emotional",
+    "meaning": "감정적인",
+    "example_en": "Saying goodbye at the airport was very emotional.",
+    "example_ko": "공항에서 작별 인사를 하는 것은 매우 감정적인 순간이었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "enormous",
+    "word": "enormous",
+    "meaning": "거대한, 막대한",
+    "example_en": "The company made an enormous profit this year.",
+    "example_ko": "그 회사는 올해 막대한 이익을 냈다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "essential",
+    "word": "essential",
+    "meaning": "필수적인",
+    "example_en": "Good sleep is essential for staying healthy.",
+    "example_ko": "충분한 수면은 건강을 유지하는 데 필수적이다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "exhausted",
+    "word": "exhausted",
+    "meaning": "지친, 기진맥진한",
+    "example_en": "She was exhausted after working a double shift.",
+    "example_ko": "그녀는 두 배로 근무한 후 완전히 지쳤다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "extreme",
+    "word": "extreme",
+    "meaning": "극단적인, 극심한",
+    "example_en": "The region experienced extreme heat last summer.",
+    "example_ko": "그 지역은 지난여름 극심한 더위를 겪었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fascinating",
+    "word": "fascinating",
+    "meaning": "매혹적인, 흥미로운",
+    "example_en": "The documentary told a fascinating story about the ocean.",
+    "example_ko": "그 다큐멘터리는 바다에 관한 매혹적인 이야기를 들려주었다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "flexible",
+    "word": "flexible",
+    "meaning": "유연한",
+    "example_en": "The company offers flexible working hours.",
+    "example_ko": "그 회사는 유연한 근무 시간을 제공한다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "apparently",
+    "word": "apparently",
+    "meaning": "보아하니, 명백히",
+    "example_en": "Apparently, the store closed early today.",
+    "example_ko": "보아하니 그 가게는 오늘 일찍 문을 닫은 것 같다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "barely",
+    "word": "barely",
+    "meaning": "거의 ~않다, 겨우",
+    "example_en": "We barely made it to the airport on time.",
+    "example_ko": "우리는 겨우 제시간에 공항에 도착했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "briefly",
+    "word": "briefly",
+    "meaning": "간단히, 잠시",
+    "example_en": "She briefly explained the new policy to the staff.",
+    "example_ko": "그녀는 직원들에게 새 정책을 간단히 설명했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "constantly",
+    "word": "constantly",
+    "meaning": "끊임없이",
+    "example_en": "His phone is constantly ringing during work hours.",
+    "example_ko": "그의 전화기는 근무 시간 내내 끊임없이 울린다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "eventually",
+    "word": "eventually",
+    "meaning": "결국, 마침내",
+    "example_en": "After many tries, she eventually passed the driving test.",
+    "example_ko": "여러 번의 시도 끝에 그녀는 결국 운전면허 시험에 합격했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gradually",
+    "word": "gradually",
+    "meaning": "점차, 서서히",
+    "example_en": "The weather gradually improved throughout the week.",
+    "example_ko": "날씨는 그 주 내내 점차 좋아졌다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "hardly",
+    "word": "hardly",
+    "meaning": "거의 ~아니다",
+    "example_en": "I hardly know anyone at this new office.",
+    "example_ko": "나는 이 새 사무실에서 아는 사람이 거의 없다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "occasionally",
+    "word": "occasionally",
+    "meaning": "가끔",
+    "example_en": "We occasionally meet for coffee on weekends.",
+    "example_ko": "우리는 주말에 가끔 만나 커피를 마신다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "particularly",
+    "word": "particularly",
+    "meaning": "특히",
+    "example_en": "The traffic is particularly bad on Friday evenings.",
+    "example_ko": "금요일 저녁에는 교통이 특히 심하다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "previously",
+    "word": "previously",
+    "meaning": "이전에",
+    "example_en": "She previously worked at a small design studio.",
+    "example_ko": "그녀는 이전에 작은 디자인 스튜디오에서 일했다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "relatively",
+    "word": "relatively",
+    "meaning": "비교적, 상대적으로",
+    "example_en": "The new apartment is relatively cheap for the area.",
+    "example_ko": "그 새 아파트는 그 지역에서 비교적 저렴한 편이다.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "engage",
+    "word": "engage",
+    "meaning": "참여시키다, 몰두하게 하다",
+    "example_en": "The game really engages young children.",
+    "example_ko": "그 게임은 어린아이들을 정말 몰입하게 만든다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "insist",
+    "word": "insist",
+    "meaning": "주장하다, 고집하다",
+    "example_en": "He insisted on paying for the dinner.",
+    "example_ko": "그는 저녁 식사비를 자신이 내겠다고 고집했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "involve",
+    "word": "involve",
+    "meaning": "포함하다, 관련시키다",
+    "example_en": "The project involves several different departments.",
+    "example_ko": "그 프로젝트는 여러 다른 부서를 포함한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "occur",
+    "word": "occur",
+    "meaning": "발생하다, 일어나다",
+    "example_en": "The accident occurred late at night.",
+    "example_ko": "그 사고는 늦은 밤에 발생했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "admit",
+    "word": "admit",
+    "meaning": "인정하다, 시인하다",
+    "example_en": "He admitted that he had made a mistake.",
+    "example_ko": "그는 자신이 실수했다는 것을 인정했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "advise",
+    "word": "advise",
+    "meaning": "조언하다, 충고하다",
+    "example_en": "My doctor advised me to get more sleep.",
+    "example_ko": "의사는 나에게 잠을 더 자라고 조언했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "announce",
+    "word": "announce",
+    "meaning": "발표하다, 알리다",
+    "example_en": "The company announced a new product this morning.",
+    "example_ko": "그 회사는 오늘 아침 신제품을 발표했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "assist",
+    "word": "assist",
+    "meaning": "돕다, 지원하다",
+    "example_en": "The staff assisted customers with their luggage.",
+    "example_ko": "직원들은 고객들의 짐을 옮기는 것을 도왔다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "attach",
+    "word": "attach",
+    "meaning": "첨부하다, 붙이다",
+    "example_en": "Please attach your resume to the email.",
+    "example_ko": "이메일에 이력서를 첨부해 주세요.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "attempt",
+    "word": "attempt",
+    "meaning": "시도하다",
+    "example_en": "She attempted to fix the printer herself.",
+    "example_ko": "그녀는 직접 프린터를 고쳐보려고 시도했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "attract",
+    "word": "attract",
+    "meaning": "끌어들이다, 매료시키다",
+    "example_en": "The new store attracted a lot of customers.",
+    "example_ko": "그 새 매장은 많은 손님을 끌어들였다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "award",
+    "word": "award",
+    "meaning": "수여하다, 상",
+    "example_en": "The company awarded her employee of the year.",
+    "example_ko": "그 회사는 그녀에게 올해의 직원상을 수여했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "calculate",
+    "word": "calculate",
+    "meaning": "계산하다",
+    "example_en": "He calculated the total cost of the trip.",
+    "example_ko": "그는 여행의 총비용을 계산했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "cause",
+    "word": "cause",
+    "meaning": "야기하다, 원인",
+    "example_en": "Heavy traffic caused us to be late for dinner.",
+    "example_ko": "극심한 교통 체증 때문에 우리는 저녁 약속에 늦었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "charge",
+    "word": "charge",
+    "meaning": "청구하다, 충전하다",
+    "example_en": "The hotel charged an extra fee for late checkout.",
+    "example_ko": "그 호텔은 늦은 체크아웃에 추가 요금을 청구했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "claim",
+    "word": "claim",
+    "meaning": "주장하다, 요구하다",
+    "example_en": "He claimed that he had never seen the email.",
+    "example_ko": "그는 그 이메일을 본 적이 없다고 주장했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "combine",
+    "word": "combine",
+    "meaning": "결합하다, 합치다",
+    "example_en": "The recipe combines sweet and spicy flavors.",
+    "example_ko": "그 레시피는 달콤한 맛과 매운맛을 결합한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "commit",
+    "word": "commit",
+    "meaning": "헌신하다, 저지르다",
+    "example_en": "He committed himself to finishing the project on time.",
+    "example_ko": "그는 프로젝트를 제시간에 끝내는 데 전념했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "communicate",
+    "word": "communicate",
+    "meaning": "소통하다, 전달하다",
+    "example_en": "It's important to communicate clearly with your team.",
+    "example_ko": "팀원들과 명확하게 소통하는 것이 중요하다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "compete",
+    "word": "compete",
+    "meaning": "경쟁하다",
+    "example_en": "Many small shops compete with large online stores.",
+    "example_ko": "많은 소규모 상점들이 대형 온라인 스토어와 경쟁한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "concentrate",
+    "word": "concentrate",
+    "meaning": "집중하다",
+    "example_en": "It's hard to concentrate with all this noise.",
+    "example_ko": "이렇게 시끄러우니 집중하기가 힘들다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "concern",
+    "word": "concern",
+    "meaning": "관련되다, 걱정시키다",
+    "example_en": "The rising prices concern many families.",
+    "example_ko": "물가 상승은 많은 가정에게 걱정거리다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "conclude",
+    "word": "conclude",
+    "meaning": "결론짓다, 마치다",
+    "example_en": "The report concludes that sales will keep growing.",
+    "example_ko": "그 보고서는 매출이 계속 증가할 것이라고 결론짓는다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "consist",
+    "word": "consist",
+    "meaning": "~로 구성되다",
+    "example_en": "The team consists of five engineers and two designers.",
+    "example_ko": "그 팀은 엔지니어 다섯 명과 디자이너 두 명으로 구성되어 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "contribute",
+    "word": "contribute",
+    "meaning": "기여하다, 기부하다",
+    "example_en": "Every team member contributed to the project's success.",
+    "example_ko": "팀원 모두가 프로젝트의 성공에 기여했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "cover",
+    "word": "cover",
+    "meaning": "덮다, 다루다",
+    "example_en": "The insurance covers most medical expenses.",
+    "example_ko": "그 보험은 대부분의 의료비를 보장한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crash",
+    "word": "crash",
+    "meaning": "충돌하다, 추락하다",
+    "example_en": "My computer crashed while I was saving the file.",
+    "example_ko": "파일을 저장하는 도중에 내 컴퓨터가 멈춰버렸다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "damage",
+    "word": "damage",
+    "meaning": "손상시키다, 피해",
+    "example_en": "The storm damaged several houses in the area.",
+    "example_ko": "폭풍이 그 지역의 여러 집에 피해를 입혔다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "decline",
+    "word": "decline",
+    "meaning": "거절하다, 감소하다",
+    "example_en": "He politely declined the invitation to the party.",
+    "example_ko": "그는 파티 초대를 정중히 거절했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "defend",
+    "word": "defend",
+    "meaning": "방어하다, 옹호하다",
+    "example_en": "She defended her decision in front of the board.",
+    "example_ko": "그녀는 이사회 앞에서 자신의 결정을 옹호했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "define",
+    "word": "define",
+    "meaning": "정의하다",
+    "example_en": "Success can be defined differently by each person.",
+    "example_ko": "성공은 사람마다 다르게 정의될 수 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "delay",
+    "word": "delay",
+    "meaning": "지연시키다, 미루다",
+    "example_en": "The flight was delayed due to bad weather.",
+    "example_ko": "악천후로 인해 그 항공편은 지연되었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "assign",
+    "word": "assign",
+    "meaning": "할당하다, 배정하다",
+    "example_en": "The manager assigned the task to a new employee.",
+    "example_ko": "매니저는 신입 직원에게 그 업무를 배정했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "destroy",
+    "word": "destroy",
+    "meaning": "파괴하다",
+    "example_en": "The fire destroyed the entire warehouse.",
+    "example_ko": "그 화재는 창고 전체를 파괴했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "differ",
+    "word": "differ",
+    "meaning": "다르다",
+    "example_en": "Opinions differ widely on this topic.",
+    "example_ko": "이 주제에 대해서는 의견이 크게 갈린다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dismiss",
+    "word": "dismiss",
+    "meaning": "해고하다, 일축하다",
+    "example_en": "The manager dismissed the idea as too risky.",
+    "example_ko": "매니저는 그 아이디어가 너무 위험하다며 일축했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "educate",
+    "word": "educate",
+    "meaning": "교육하다",
+    "example_en": "The program aims to educate parents about nutrition.",
+    "example_ko": "그 프로그램은 부모들에게 영양에 대해 교육하는 것을 목표로 한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "elect",
+    "word": "elect",
+    "meaning": "선출하다",
+    "example_en": "The members elected a new club president.",
+    "example_ko": "회원들은 새로운 동아리 회장을 선출했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "eliminate",
+    "word": "eliminate",
+    "meaning": "제거하다, 없애다",
+    "example_en": "We eliminated two options from our list.",
+    "example_ko": "우리는 목록에서 두 가지 선택지를 제외했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "embarrass",
+    "word": "embarrass",
+    "meaning": "당황하게 하다, 창피하게 하다",
+    "example_en": "He was embarrassed by his mistake in front of everyone.",
+    "example_ko": "그는 모두 앞에서 자신의 실수 때문에 창피했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "emerge",
+    "word": "emerge",
+    "meaning": "나타나다, 부상하다",
+    "example_en": "A new trend has emerged in the fashion industry.",
+    "example_ko": "패션 업계에서 새로운 트렌드가 나타났다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "employ",
+    "word": "employ",
+    "meaning": "고용하다",
+    "example_en": "The factory employs over two hundred workers.",
+    "example_ko": "그 공장은 200명이 넘는 근로자를 고용하고 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "enable",
+    "word": "enable",
+    "meaning": "가능하게 하다",
+    "example_en": "This software enables teams to work together remotely.",
+    "example_ko": "이 소프트웨어는 팀이 원격으로 함께 일할 수 있게 해준다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "endure",
+    "word": "endure",
+    "meaning": "견디다, 참다",
+    "example_en": "The workers endured long hours during the busy season.",
+    "example_ko": "근로자들은 성수기 동안 긴 근무 시간을 견뎌냈다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "evaluate",
+    "word": "evaluate",
+    "meaning": "평가하다",
+    "example_en": "Managers evaluate employee performance every year.",
+    "example_ko": "관리자들은 매년 직원들의 성과를 평가한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "exceed",
+    "word": "exceed",
+    "meaning": "초과하다, 넘어서다",
+    "example_en": "The project's cost exceeded our budget.",
+    "example_ko": "그 프로젝트의 비용이 예산을 초과했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "excite",
+    "word": "excite",
+    "meaning": "흥분시키다, 들뜨게 하다",
+    "example_en": "The news excited everyone on the team.",
+    "example_ko": "그 소식은 팀원 모두를 들뜨게 했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "exhaust",
+    "word": "exhaust",
+    "meaning": "지치게 하다, 소진시키다",
+    "example_en": "The long trip exhausted the entire family.",
+    "example_ko": "그 긴 여행은 가족 전체를 지치게 만들었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "expand",
+    "word": "expand",
+    "meaning": "확장하다, 확대하다",
+    "example_en": "The company plans to expand into new markets next year.",
+    "example_ko": "그 회사는 내년에 새로운 시장으로 확장할 계획이다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "experiment",
+    "word": "experiment",
+    "meaning": "실험하다",
+    "example_en": "The chef likes to experiment with new recipes.",
+    "example_ko": "그 요리사는 새로운 레시피를 실험해 보는 것을 좋아한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "expire",
+    "word": "expire",
+    "meaning": "만료되다",
+    "example_en": "My passport expires next month.",
+    "example_ko": "내 여권은 다음 달에 만료된다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "extend",
+    "word": "extend",
+    "meaning": "연장하다, 확장하다",
+    "example_en": "They extended the deadline by one week.",
+    "example_ko": "그들은 마감일을 일주일 연장했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fasten",
+    "word": "fasten",
+    "meaning": "고정하다, 매다",
+    "example_en": "Please fasten your seatbelt before we take off.",
+    "example_ko": "이륙하기 전에 안전벨트를 매 주세요.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "forbid",
+    "word": "forbid",
+    "meaning": "금지하다",
+    "example_en": "The rules forbid smoking inside the building.",
+    "example_ko": "규정상 건물 내 흡연은 금지되어 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "forgive",
+    "word": "forgive",
+    "meaning": "용서하다",
+    "example_en": "It took time, but she finally forgave her friend.",
+    "example_ko": "시간이 걸렸지만 그녀는 결국 친구를 용서했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "frighten",
+    "word": "frighten",
+    "meaning": "놀라게 하다, 겁먹게 하다",
+    "example_en": "The loud thunder frightened the small dog.",
+    "example_ko": "큰 천둥소리가 작은 강아지를 놀라게 했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gain",
+    "word": "gain",
+    "meaning": "얻다, 늘리다",
+    "example_en": "He gained a lot of experience from the internship.",
+    "example_ko": "그는 인턴십을 통해 많은 경험을 얻었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "generate",
+    "word": "generate",
+    "meaning": "발생시키다, 만들어내다",
+    "example_en": "Solar panels generate electricity from sunlight.",
+    "example_ko": "태양광 패널은 햇빛으로 전기를 생산한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "grant",
+    "word": "grant",
+    "meaning": "승인하다, 부여하다",
+    "example_en": "The university granted her a full scholarship.",
+    "example_ko": "그 대학은 그녀에게 전액 장학금을 지급했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "harm",
+    "word": "harm",
+    "meaning": "해를 끼치다",
+    "example_en": "Too much sugar can harm your health.",
+    "example_ko": "설탕을 너무 많이 섭취하면 건강에 해로울 수 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "heal",
+    "word": "heal",
+    "meaning": "치유하다, 낫다",
+    "example_en": "The wound healed quickly after treatment.",
+    "example_ko": "그 상처는 치료 후 빨리 나았다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "highlight",
+    "word": "highlight",
+    "meaning": "강조하다",
+    "example_en": "The report highlights the need for better training.",
+    "example_ko": "그 보고서는 더 나은 교육의 필요성을 강조한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "impress",
+    "word": "impress",
+    "meaning": "깊은 인상을 주다",
+    "example_en": "His presentation impressed everyone in the room.",
+    "example_ko": "그의 발표는 그 자리에 있던 모두에게 깊은 인상을 남겼다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "indicate",
+    "word": "indicate",
+    "meaning": "나타내다, 가리키다",
+    "example_en": "The data indicates a steady rise in demand.",
+    "example_ko": "그 데이터는 수요가 꾸준히 증가하고 있음을 나타낸다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "injure",
+    "word": "injure",
+    "meaning": "부상을 입히다",
+    "example_en": "The player injured his knee during practice.",
+    "example_ko": "그 선수는 훈련 중에 무릎을 다쳤다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "inspect",
+    "word": "inspect",
+    "meaning": "점검하다, 검사하다",
+    "example_en": "The mechanic inspected the car before the trip.",
+    "example_ko": "정비사는 여행을 떠나기 전에 차를 점검했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "inspire",
+    "word": "inspire",
+    "meaning": "영감을 주다",
+    "example_en": "Her story inspired many young students.",
+    "example_ko": "그녀의 이야기는 많은 어린 학생들에게 영감을 주었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "intend",
+    "word": "intend",
+    "meaning": "의도하다, ~할 작정이다",
+    "example_en": "We intend to finish the renovation by summer.",
+    "example_ko": "우리는 여름까지 리모델링을 끝낼 작정이다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "invent",
+    "word": "invent",
+    "meaning": "발명하다",
+    "example_en": "He invented a simple tool to save time at work.",
+    "example_ko": "그는 업무 시간을 절약해 주는 간단한 도구를 발명했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "invest",
+    "word": "invest",
+    "meaning": "투자하다",
+    "example_en": "They invested their savings in a small business.",
+    "example_ko": "그들은 저축한 돈을 작은 사업에 투자했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "isolate",
+    "word": "isolate",
+    "meaning": "고립시키다, 격리하다",
+    "example_en": "The heavy snow isolated the village for two days.",
+    "example_ko": "폭설로 그 마을은 이틀 동안 고립되었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "justify",
+    "word": "justify",
+    "meaning": "정당화하다",
+    "example_en": "He tried to justify his decision to the team.",
+    "example_ko": "그는 팀원들에게 자신의 결정을 정당화하려 했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "limit",
+    "word": "limit",
+    "meaning": "제한하다",
+    "example_en": "The doctor advised him to limit his caffeine intake.",
+    "example_ko": "의사는 그에게 카페인 섭취를 제한하라고 조언했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "load",
+    "word": "load",
+    "meaning": "싣다, 적재하다",
+    "example_en": "They loaded the truck with boxes of supplies.",
+    "example_ko": "그들은 트럭에 물품 상자를 실었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "locate",
+    "word": "locate",
+    "meaning": "위치시키다, 찾아내다",
+    "example_en": "The new office is located near the subway station.",
+    "example_ko": "새 사무실은 지하철역 근처에 위치해 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "maintain",
+    "word": "maintain",
+    "meaning": "유지하다",
+    "example_en": "It's important to maintain a healthy diet.",
+    "example_ko": "건강한 식습관을 유지하는 것이 중요하다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "measure",
+    "word": "measure",
+    "meaning": "측정하다",
+    "example_en": "He measured the room before buying new furniture.",
+    "example_ko": "그는 새 가구를 사기 전에 방을 측정했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "merge",
+    "word": "merge",
+    "meaning": "합병하다, 합치다",
+    "example_en": "The two departments merged into one team.",
+    "example_ko": "그 두 부서는 하나의 팀으로 합병되었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "mislead",
+    "word": "mislead",
+    "meaning": "오해하게 하다, 잘못 이끌다",
+    "example_en": "The advertisement misled customers about the price.",
+    "example_ko": "그 광고는 고객들에게 가격에 대해 오해를 불러일으켰다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "modify",
+    "word": "modify",
+    "meaning": "수정하다, 변경하다",
+    "example_en": "They modified the plan to fit the new budget.",
+    "example_ko": "그들은 새 예산에 맞게 계획을 수정했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "monitor",
+    "word": "monitor",
+    "meaning": "모니터링하다, 감시하다",
+    "example_en": "The nurse monitored the patient's heart rate closely.",
+    "example_ko": "간호사는 환자의 심박수를 면밀히 모니터링했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "motivate",
+    "word": "motivate",
+    "meaning": "동기를 부여하다",
+    "example_en": "A good coach knows how to motivate the team.",
+    "example_ko": "좋은 코치는 팀에 동기를 부여하는 방법을 안다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "negotiate",
+    "word": "negotiate",
+    "meaning": "협상하다",
+    "example_en": "They negotiated a better price for the car.",
+    "example_ko": "그들은 그 차의 가격을 더 낮추기 위해 협상했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "notify",
+    "word": "notify",
+    "meaning": "통지하다, 알리다",
+    "example_en": "We will notify you as soon as the order ships.",
+    "example_ko": "주문한 물건이 발송되는 즉시 알려드리겠습니다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "object",
+    "word": "object",
+    "meaning": "반대하다",
+    "example_en": "Several residents objected to the new construction plan.",
+    "example_ko": "여러 주민들이 새로운 건설 계획에 반대했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "obtain",
+    "word": "obtain",
+    "meaning": "얻다, 획득하다",
+    "example_en": "You need to obtain a permit before you build.",
+    "example_ko": "건축을 하기 전에 허가를 받아야 한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "oppose",
+    "word": "oppose",
+    "meaning": "반대하다",
+    "example_en": "Many employees opposed the change in schedule.",
+    "example_ko": "많은 직원들이 일정 변경에 반대했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "overlook",
+    "word": "overlook",
+    "meaning": "간과하다, 눈감아주다",
+    "example_en": "It's easy to overlook small details when you're busy.",
+    "example_ko": "바쁠 때는 작은 세부 사항을 간과하기 쉽다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "permit",
+    "word": "permit",
+    "meaning": "허락하다, 허가증",
+    "example_en": "Smoking is not permitted inside the building.",
+    "example_ko": "건물 내부에서는 흡연이 허용되지 않는다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "persuade",
+    "word": "persuade",
+    "meaning": "설득하다",
+    "example_en": "She persuaded her boss to give her extra time.",
+    "example_ko": "그녀는 상사를 설득해 시간을 더 받아냈다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "postpone",
+    "word": "postpone",
+    "meaning": "연기하다, 미루다",
+    "example_en": "The game was postponed because of heavy rain.",
+    "example_ko": "그 경기는 폭우 때문에 연기되었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "predict",
+    "word": "predict",
+    "meaning": "예측하다",
+    "example_en": "Experts predict a mild winter this year.",
+    "example_ko": "전문가들은 올해 겨울이 온화할 것이라고 예측한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "agreement",
+    "word": "agreement",
+    "meaning": "합의, 동의",
+    "example_en": "The two companies reached an agreement after weeks of talks.",
+    "example_ko": "그 두 회사는 몇 주간의 협의 끝에 합의에 도달했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "argument",
+    "word": "argument",
+    "meaning": "논쟁, 주장",
+    "example_en": "They had a small argument about where to eat.",
+    "example_ko": "그들은 어디서 먹을지를 두고 작은 말다툼을 했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "atmosphere",
+    "word": "atmosphere",
+    "meaning": "분위기, 대기",
+    "example_en": "The cafe has a cozy atmosphere for studying.",
+    "example_ko": "그 카페는 공부하기에 아늑한 분위기를 가지고 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "attitude",
+    "word": "attitude",
+    "meaning": "태도",
+    "example_en": "She has a positive attitude toward her work.",
+    "example_ko": "그녀는 자신의 일에 대해 긍정적인 태도를 가지고 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "authority",
+    "word": "authority",
+    "meaning": "권한, 당국",
+    "example_en": "Only the manager has the authority to approve refunds.",
+    "example_ko": "오직 매니저만이 환불을 승인할 권한을 가지고 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "balance",
+    "word": "balance",
+    "meaning": "균형, 잔액",
+    "example_en": "It's hard to find a balance between work and life.",
+    "example_ko": "일과 삶 사이의 균형을 찾기가 쉽지 않다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "barrier",
+    "word": "barrier",
+    "meaning": "장벽, 장애물",
+    "example_en": "Language can be a barrier when traveling abroad.",
+    "example_ko": "해외여행을 할 때 언어가 장벽이 될 수 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "behavior",
+    "word": "behavior",
+    "meaning": "행동, 태도",
+    "example_en": "The teacher praised the students' good behavior.",
+    "example_ko": "선생님은 학생들의 바른 행동을 칭찬했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "circumstance",
+    "word": "circumstance",
+    "meaning": "상황, 환경",
+    "example_en": "Under normal circumstances, the trip takes three hours.",
+    "example_ko": "평상시 상황이라면 그 여행은 세 시간이 걸린다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "competition",
+    "word": "competition",
+    "meaning": "경쟁, 대회",
+    "example_en": "The market has become more competitive every year.",
+    "example_ko": "시장 경쟁은 해마다 더 치열해지고 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "complaint",
+    "word": "complaint",
+    "meaning": "불만, 항의",
+    "example_en": "The hotel received several complaints about the noise.",
+    "example_ko": "그 호텔은 소음에 대한 여러 불만을 접수했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "concept",
+    "word": "concept",
+    "meaning": "개념",
+    "example_en": "The book explains a complex concept in simple terms.",
+    "example_ko": "그 책은 복잡한 개념을 쉬운 말로 설명한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "conference",
+    "word": "conference",
+    "meaning": "회의, 학회",
+    "example_en": "She gave a talk at an international conference.",
+    "example_ko": "그녀는 국제 학회에서 강연을 했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "confidence",
+    "word": "confidence",
+    "meaning": "자신감, 신뢰",
+    "example_en": "Practicing every day gave him more confidence.",
+    "example_ko": "매일 연습한 덕분에 그는 자신감이 더 생겼다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "conflict",
+    "word": "conflict",
+    "meaning": "갈등, 충돌",
+    "example_en": "The two colleagues resolved their conflict calmly.",
+    "example_ko": "두 동료는 자신들의 갈등을 차분하게 해결했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "consequence",
+    "word": "consequence",
+    "meaning": "결과, 여파",
+    "example_en": "He didn't think about the consequences of his choice.",
+    "example_ko": "그는 자신의 선택이 가져올 결과를 생각하지 않았다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "contract",
+    "word": "contract",
+    "meaning": "계약, 계약서",
+    "example_en": "Both sides signed the contract yesterday.",
+    "example_ko": "양측은 어제 계약서에 서명했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "contribution",
+    "word": "contribution",
+    "meaning": "기여, 공헌",
+    "example_en": "Her contribution to the project was greatly appreciated.",
+    "example_ko": "그 프로젝트에 대한 그녀의 기여는 큰 감사를 받았다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crisis",
+    "word": "crisis",
+    "meaning": "위기",
+    "example_en": "The company managed to survive the financial crisis.",
+    "example_ko": "그 회사는 재정 위기를 견뎌내는 데 성공했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "demand",
+    "word": "demand",
+    "meaning": "수요, 요구",
+    "example_en": "Demand for electric cars has grown rapidly.",
+    "example_ko": "전기차에 대한 수요가 빠르게 증가했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "difficulty",
+    "word": "difficulty",
+    "meaning": "어려움, 곤란",
+    "example_en": "She had difficulty finding a parking spot downtown.",
+    "example_ko": "그녀는 시내에서 주차할 곳을 찾는 데 어려움을 겪었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "discussion",
+    "word": "discussion",
+    "meaning": "토론, 논의",
+    "example_en": "The class had a lively discussion about the book.",
+    "example_ko": "그 수업은 그 책에 대해 활발한 토론을 벌였다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "economy",
+    "word": "economy",
+    "meaning": "경제",
+    "example_en": "The local economy depends heavily on tourism.",
+    "example_ko": "그 지역 경제는 관광업에 크게 의존한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "effect",
+    "word": "effect",
+    "meaning": "효과, 영향",
+    "example_en": "The new policy had a positive effect on sales.",
+    "example_ko": "새 정책은 매출에 긍정적인 영향을 미쳤다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "element",
+    "word": "element",
+    "meaning": "요소, 원소",
+    "example_en": "Trust is a key element of any relationship.",
+    "example_ko": "신뢰는 어떤 관계에서든 핵심적인 요소이다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "emergency",
+    "word": "emergency",
+    "meaning": "비상사태, 응급 상황",
+    "example_en": "In case of emergency, call this number immediately.",
+    "example_ko": "비상시에는 이 번호로 즉시 전화하세요.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "emotion",
+    "word": "emotion",
+    "meaning": "감정",
+    "example_en": "It's normal to show emotion after such news.",
+    "example_ko": "그런 소식을 듣고 감정을 드러내는 것은 자연스러운 일이다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "employer",
+    "word": "employer",
+    "meaning": "고용주",
+    "example_en": "A good employer listens to employee feedback.",
+    "example_ko": "좋은 고용주는 직원들의 의견에 귀를 기울인다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "exception",
+    "word": "exception",
+    "meaning": "예외",
+    "example_en": "Every rule has an exception, but this one rarely does.",
+    "example_ko": "모든 규칙에는 예외가 있지만 이 규칙은 거의 그렇지 않다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "expense",
+    "word": "expense",
+    "meaning": "지출, 비용",
+    "example_en": "We tracked our monthly expenses in a spreadsheet.",
+    "example_ko": "우리는 월별 지출을 스프레드시트에 기록했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "factor",
+    "word": "factor",
+    "meaning": "요인",
+    "example_en": "Price is not the only factor customers consider.",
+    "example_ko": "가격은 고객이 고려하는 유일한 요인이 아니다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "failure",
+    "word": "failure",
+    "meaning": "실패",
+    "example_en": "He learned a lot from his early failures.",
+    "example_ko": "그는 초기의 실패들로부터 많은 것을 배웠다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "foundation",
+    "word": "foundation",
+    "meaning": "기초, 재단",
+    "example_en": "Good communication is the foundation of any team.",
+    "example_ko": "좋은 소통은 어떤 팀에서든 기초가 된다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "instance",
+    "word": "instance",
+    "meaning": "사례, 경우",
+    "example_en": "In this instance, we made an exception to the rule.",
+    "example_ko": "이번 경우에는 우리가 규칙에 예외를 두었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "intention",
+    "word": "intention",
+    "meaning": "의도",
+    "example_en": "Her intention was to help, not to criticize.",
+    "example_ko": "그녀의 의도는 비판하려는 것이 아니라 돕고자 하는 것이었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "judgment",
+    "word": "judgment",
+    "meaning": "판단",
+    "example_en": "I trust her judgment when it comes to hiring.",
+    "example_ko": "나는 채용에 관한 그녀의 판단을 신뢰한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "leadership",
+    "word": "leadership",
+    "meaning": "리더십, 지도력",
+    "example_en": "Strong leadership helped the team through the crisis.",
+    "example_ko": "강한 리더십이 팀을 위기에서 벗어나게 했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "minority",
+    "word": "minority",
+    "meaning": "소수",
+    "example_en": "Only a minority of voters supported the proposal.",
+    "example_ko": "유권자 중 소수만이 그 제안을 지지했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "motive",
+    "word": "motive",
+    "meaning": "동기",
+    "example_en": "His motive for volunteering was simply to help others.",
+    "example_ko": "그가 봉사 활동을 한 동기는 단순히 다른 사람을 돕고 싶어서였다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "obligation",
+    "word": "obligation",
+    "meaning": "의무",
+    "example_en": "Employees have an obligation to follow safety rules.",
+    "example_ko": "직원들은 안전 규정을 준수할 의무가 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "output",
+    "word": "output",
+    "meaning": "생산량, 산출",
+    "example_en": "The factory increased its output this quarter.",
+    "example_ko": "그 공장은 이번 분기에 생산량을 늘렸다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "perspective",
+    "word": "perspective",
+    "meaning": "관점, 시각",
+    "example_en": "Traveling gave him a new perspective on life.",
+    "example_ko": "여행은 그에게 삶에 대한 새로운 관점을 갖게 해주었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "poverty",
+    "word": "poverty",
+    "meaning": "빈곤",
+    "example_en": "The charity works to reduce poverty in rural areas.",
+    "example_ko": "그 자선단체는 농촌 지역의 빈곤을 줄이기 위해 활동한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "presence",
+    "word": "presence",
+    "meaning": "존재, 참석",
+    "example_en": "His presence at the meeting made a big difference.",
+    "example_ko": "그가 회의에 참석한 것이 큰 차이를 만들었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "procedure",
+    "word": "procedure",
+    "meaning": "절차",
+    "example_en": "Please follow the correct procedure for reporting an error.",
+    "example_ko": "오류를 신고할 때는 올바른 절차를 따라 주세요.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "adequate",
+    "word": "adequate",
+    "meaning": "충분한, 적절한",
+    "example_en": "The room has adequate space for a small meeting.",
+    "example_ko": "그 방은 소규모 회의를 하기에 충분한 공간이 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "arrogant",
+    "word": "arrogant",
+    "meaning": "오만한, 거만한",
+    "example_en": "His arrogant attitude made him unpopular at work.",
+    "example_ko": "그의 오만한 태도는 직장에서 그를 인기 없게 만들었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "considerable",
+    "word": "considerable",
+    "meaning": "상당한",
+    "example_en": "The renovation required a considerable amount of money.",
+    "example_ko": "그 리모델링에는 상당한 금액이 필요했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "delicate",
+    "word": "delicate",
+    "meaning": "섬세한, 연약한",
+    "example_en": "Handle the antique vase with delicate care.",
+    "example_ko": "그 골동품 꽃병은 섬세하게 다뤄야 한다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dependent",
+    "word": "dependent",
+    "meaning": "의존적인",
+    "example_en": "The small town is heavily dependent on farming.",
+    "example_ko": "그 작은 마을은 농업에 크게 의존하고 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "desperate",
+    "word": "desperate",
+    "meaning": "절박한, 필사적인",
+    "example_en": "He made a desperate attempt to catch the last train.",
+    "example_ko": "그는 마지막 기차를 타기 위해 필사적으로 시도했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "distinct",
+    "word": "distinct",
+    "meaning": "뚜렷한, 별개의",
+    "example_en": "The two proposals have distinct advantages.",
+    "example_ko": "그 두 제안은 각각 뚜렷한 장점을 가지고 있다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "faithful",
+    "word": "faithful",
+    "meaning": "충실한, 신의 있는",
+    "example_en": "He has been a faithful customer for over ten years.",
+    "example_ko": "그는 10년 넘게 그 매장의 충실한 고객이었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "accordingly",
+    "word": "accordingly",
+    "meaning": "그에 따라",
+    "example_en": "The plan changed, so we adjusted our schedule accordingly.",
+    "example_ko": "계획이 바뀌어서 우리는 그에 따라 일정을 조정했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "deliberately",
+    "word": "deliberately",
+    "meaning": "고의로, 의도적으로",
+    "example_en": "He deliberately avoided the topic during dinner.",
+    "example_ko": "그는 저녁 식사 중에 그 주제를 고의로 피했다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "merely",
+    "word": "merely",
+    "meaning": "단지, 그저",
+    "example_en": "It was merely a suggestion, not a final decision.",
+    "example_ko": "그것은 최종 결정이 아니라 그저 제안일 뿐이었다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nevertheless",
+    "word": "nevertheless",
+    "meaning": "그럼에도 불구하고",
+    "example_en": "It was raining; nevertheless, we went for a walk.",
+    "example_ko": "비가 내리고 있었지만 그럼에도 불구하고 우리는 산책을 나갔다.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "promptly",
+    "word": "promptly",
+    "meaning": "신속하게, 즉각",
+    "example_en": "The company promptly responded to the complaint.",
+    "example_ko": "그 회사는 그 불만 사항에 신속하게 대응했다.",
+    "difficulty": "hard"
+  }
 ]
