@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { getStats, isTodayCompleted } from '../data/statsStore'
+import { DAILY_WORD_COUNT } from '../lib/constants'
 
 interface StatsPageProps {
   onGoToLearn?: () => void
@@ -33,7 +34,7 @@ export default function StatsPage({ onGoToLearn }: StatsPageProps) {
               {todayDone ? '오늘 학습 완료!' : '아직 오늘 학습 전이에요'}
             </p>
             <p className="text-sm text-slate-500">
-              {todayDone ? '내일도 이 기세로 이어가요' : '오늘의 단어 50개를 만나보세요'}
+              {todayDone ? '내일도 이 기세로 이어가요' : `오늘의 단어 ${DAILY_WORD_COUNT}개를 만나보세요`}
             </p>
           </div>
           {!todayDone && onGoToLearn && (

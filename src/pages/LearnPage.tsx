@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Word } from '../types/word'
 import { wordRepository, type DailySetInfo } from '../data/wordRepository'
 import { recordDailyCompletion } from '../data/statsStore'
+import { DAILY_WORD_COUNT } from '../lib/constants'
 import WordCard from '../components/WordCard'
 import ProgressBar from '../components/ProgressBar'
 
@@ -26,7 +27,10 @@ export default function LearnPage({ onGoToQuiz }: LearnPageProps) {
   const [isDragging, setIsDragging] = useState(false)
 
   useEffect(() => {
-    Promise.all([wordRepository.getDailyWords(50), wordRepository.getDailySetInfo(50)]).then(
+    Promise.all([
+      wordRepository.getDailyWords(DAILY_WORD_COUNT),
+      wordRepository.getDailySetInfo(DAILY_WORD_COUNT),
+    ]).then(
       ([w, info]) => {
         setWords(w)
         setSetInfo(info)
@@ -100,7 +104,9 @@ export default function LearnPage({ onGoToQuiz }: LearnPageProps) {
               </span>
             )}
           </div>
-          <p className="text-sm text-slate-400">예문과 함께 하루 50개씩, 하나씩 익혀봐요</p>
+          <p className="text-sm text-slate-400">
+            예문과 함께 하루 {DAILY_WORD_COUNT}개씩, 하나씩 익혀봐요
+          </p>
         </header>
 
         <ProgressBar current={Math.min(index, total)} total={total} />

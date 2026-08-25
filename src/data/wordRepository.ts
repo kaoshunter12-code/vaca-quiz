@@ -1,6 +1,7 @@
 import type { Word } from '../types/word'
 import sampleWords from './words.sample.json'
 import { getTodaysSetRange } from './rotationStore'
+import { DAILY_WORD_COUNT } from '../lib/constants'
 
 // 데이터 접근을 이 모듈 뒤로 감춰서, 나중에 실제 API/DB로 교체할 때
 // 이 파일만 바꾸면 되도록 분리했다.
@@ -24,12 +25,12 @@ class LocalJsonWordRepository implements WordRepository {
     return this.words
   }
 
-  async getDailyWords(setSize = 50): Promise<Word[]> {
+  async getDailyWords(setSize = DAILY_WORD_COUNT): Promise<Word[]> {
     const { start, end } = getTodaysSetRange(this.words.length, setSize)
     return this.words.slice(start, end)
   }
 
-  async getDailySetInfo(setSize = 50): Promise<DailySetInfo> {
+  async getDailySetInfo(setSize = DAILY_WORD_COUNT): Promise<DailySetInfo> {
     const { setNumber, totalSets } = getTodaysSetRange(this.words.length, setSize)
     return { setNumber, totalSets }
   }

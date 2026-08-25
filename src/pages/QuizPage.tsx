@@ -3,6 +3,7 @@ import type { Word } from '../types/word'
 import { wordRepository } from '../data/wordRepository'
 import { recordReview } from '../data/reviewStore'
 import { findWordToken } from '../lib/findWordToken'
+import { DAILY_WORD_COUNT } from '../lib/constants'
 import ProgressBar from '../components/ProgressBar'
 import BlankFillCard from '../components/BlankFillCard'
 
@@ -18,7 +19,7 @@ export default function QuizPage({ onGoToLearn }: QuizPageProps) {
   const [missedWordIds, setMissedWordIds] = useState<string[]>([])
 
   useEffect(() => {
-    wordRepository.getDailyWords(50).then((w) => {
+    wordRepository.getDailyWords(DAILY_WORD_COUNT).then((w) => {
       setWords(w)
       setLoading(false)
     })
