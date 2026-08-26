@@ -147,29 +147,26 @@ interface AnswerCompareRowProps {
   variant: 'wrong' | 'correct'
 }
 
-/** 오답일 때 "내가 쓴 답"과 "정답"을 나란히 보여주며, 서로 다른 글자만 하이라이트한다. */
+/**
+ * 오답일 때 "내가 쓴 답"과 "정답"을 나란히 보여준다. 맞는 글자는 평범한
+ * 색으로 두고, 정답과 실제로 다른 글자만 색을 입혀 눈에 띄게 한다 —
+ * 그래야 "내가 쓴 답" 줄이 전부 빨갛게 보여서 마치 정답이 아니라 오류
+ * 표시처럼 오해되는 일 없이, 어느 글자가 왜 틀렸는지 바로 구분된다.
+ */
 function AnswerCompareRow({ label, text, against, variant }: AnswerCompareRowProps) {
   const { aMatch: matchFlags } = diffChars(text, against)
   const isWrong = variant === 'wrong'
+  const diffTextClass = isWrong ? 'text-rose-600' : 'text-emerald-600'
+  const diffBgClass = isWrong ? 'bg-rose-100' : 'bg-emerald-100'
 
   return (
     <div className="flex items-baseline gap-2">
       <span className="text-xs font-medium text-slate-400 w-16 shrink-0">{label}</span>
-      <span
-        className={`font-mono text-base font-bold tracking-wide ${
-          isWrong ? 'text-rose-600' : 'text-emerald-700'
-        }`}
-      >
+      <span className="font-mono text-base font-bold tracking-wide text-slate-700">
         {[...text].map((char, i) => (
           <span
             key={i}
-            className={
-              matchFlags[i]
-                ? undefined
-                : isWrong
-                  ? 'bg-rose-200 rounded-sm'
-                  : 'bg-emerald-200 rounded-sm underline decoration-emerald-600 decoration-2'
-            }
+            className={matchFlags[i] ? undefined : `${diffTextClass} ${diffBgClass} rounded-sm px-px`}
           >
             {char}
           </span>
