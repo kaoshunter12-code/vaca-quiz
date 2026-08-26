@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { Word } from '../types/word'
 import type { TokenMatch } from '../lib/findWordToken'
-import { diffChars } from '../lib/diffChars'
 
 type AnswerStatus = 'answering' | 'correct' | 'incorrect'
 
@@ -108,8 +107,18 @@ export default function BlankFillCard({ word, blank, onAnswered, onNext }: Blank
       {status === 'incorrect' && (
         <div className="rounded-2xl p-4 flex flex-col gap-3 bg-rose-50">
           <div className="flex flex-col gap-1">
-            <AnswerCompareRow label="내가 쓴 답" text={input.trim()} against={blank.text} variant="wrong" />
-            <AnswerCompareRow label="정답" text={blank.text} against={input.trim()} variant="correct" />
+            <div className="flex items-baseline gap-2">
+              <span className="text-xs font-medium text-slate-400 w-16 shrink-0">내가 쓴 답</span>
+              <span className="font-mono text-base font-bold tracking-wide text-rose-600">
+                {input.trim()}
+              </span>
+            </div>
+            <div className="flex items-baseline gap-2">
+              <span className="text-xs font-medium text-slate-400 w-16 shrink-0">정답</span>
+              <span className="font-mono text-base font-bold tracking-wide text-rose-600">
+                {blank.text}
+              </span>
+            </div>
           </div>
           <div className="h-px bg-rose-100" />
           <p className="text-sm text-slate-600">{word.example_en}</p>
@@ -136,42 +145,6 @@ export default function BlankFillCard({ word, blank, onAnswered, onNext }: Blank
           다음
         </button>
       )}
-    </div>
-  )
-}
-
-interface AnswerCompareRowProps {
-  label: string
-  text: string
-  against: string
-  variant: 'wrong' | 'correct'
-}
-
-/**
- * 오답일 때 "내가 쓴 답"과 "정답"을 나란히 보여준다. 맞는 글자는 평범한
- * 색으로 두고, 정답과 실제로 다른 글자만 색을 입혀 눈에 띄게 한다 —
- * 그래야 "내가 쓴 답" 줄이 전부 빨갛게 보여서 마치 정답이 아니라 오류
- * 표시처럼 오해되는 일 없이, 어느 글자가 왜 틀렸는지 바로 구분된다.
- */
-function AnswerCompareRow({ label, text, against, variant }: AnswerCompareRowProps) {
-  const { aMatch: matchFlags } = diffChars(text, against)
-  const isWrong = variant === 'wrong'
-  const diffTextClass = isWrong ? 'text-rose-600' : 'text-emerald-600'
-  const diffBgClass = isWrong ? 'bg-rose-100' : 'bg-emerald-100'
-
-  return (
-    <div className="flex items-baseline gap-2">
-      <span className="text-xs font-medium text-slate-400 w-16 shrink-0">{label}</span>
-      <span className="font-mono text-base font-bold tracking-wide text-slate-700">
-        {[...text].map((char, i) => (
-          <span
-            key={i}
-            className={matchFlags[i] ? undefined : `${diffTextClass} ${diffBgClass} rounded-sm px-px`}
-          >
-            {char}
-          </span>
-        ))}
-      </span>
     </div>
   )
 }
