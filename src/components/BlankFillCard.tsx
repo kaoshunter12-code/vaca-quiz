@@ -73,7 +73,11 @@ export default function BlankFillCard({ word, blank, onAnswered, onNext }: Blank
   return (
     <div
       className={`rounded-3xl bg-white shadow-lg shadow-slate-200/70 ring-1 ring-slate-100 p-6 sm:p-8 flex flex-col gap-6 ${
-        status === 'incorrect' ? 'animate-shake' : status === 'correct' ? 'animate-pop' : ''
+        status === 'incorrect'
+          ? 'animate-shake'
+          : status === 'correct'
+            ? 'animate-pop'
+            : 'animate-fade-in-up'
       }`}
     >
       <p className="text-center text-lg font-semibold text-slate-700">{word.meaning}</p>

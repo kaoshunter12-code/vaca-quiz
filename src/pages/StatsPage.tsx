@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { getStats, isTodayCompleted } from '../data/statsStore'
 import { DAILY_WORD_COUNT } from '../lib/constants'
+import Mascot from '../components/Mascot'
 
 interface StatsPageProps {
   onGoToLearn?: () => void
@@ -61,11 +62,13 @@ export default function StatsPage({ onGoToLearn }: StatsPageProps) {
           </div>
         </div>
 
-        <p className="text-center text-sm text-violet-500 font-medium">
-          {stats.streak >= 3
-            ? `${stats.streak}일 연속 학습 중이에요, 정말 대단해요! 🎉`
-            : '작은 습관이 쌓여 큰 실력이 돼요 🌱'}
-        </p>
+        <Mascot
+          message={
+            stats.streak >= 3
+              ? `${stats.streak}일 연속 학습 중이에요, 정말 대단해요! 🎉`
+              : '작은 습관이 쌓여 큰 실력이 돼요 🌱'
+          }
+        />
       </div>
     </div>
   )

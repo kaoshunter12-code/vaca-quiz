@@ -19,7 +19,7 @@ const difficultyLabel: Record<Word['difficulty'], string> = {
 
 export default function WordCard({ word }: WordCardProps) {
   return (
-    <div className="relative w-full rounded-3xl bg-white shadow-lg shadow-slate-200/70 ring-1 ring-slate-100 p-6 sm:p-8 flex flex-col gap-6 select-none">
+    <div className="relative w-full rounded-3xl bg-white shadow-lg shadow-slate-200/70 ring-1 ring-slate-100 p-6 sm:p-8 flex flex-col gap-6 select-none animate-fade-in-up">
       <div className="flex items-start justify-between">
         <span
           className={`text-xs font-semibold px-2.5 py-1 rounded-full ${difficultyStyle[word.difficulty]}`}

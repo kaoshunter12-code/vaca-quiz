@@ -24,3 +24,27 @@ body {
 .animate-pop {
   animation: pop 0.3s;
 }
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.35s ease-out both;
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+@keyframes tab-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-tab-fade {
+  animation: tab-fade 0.2s ease-out both;
+}

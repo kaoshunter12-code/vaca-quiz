@@ -15,9 +15,22 @@ export default function BottomNav<T extends string>({
   active,
   onChange,
 }: BottomNavProps<T>) {
+  const activeIndex = Math.max(0, items.findIndex((item) => item.key === active))
+
   return (
     <nav className="fixed bottom-0 inset-x-0 z-20 bg-white/90 backdrop-blur border-t border-slate-100">
-      <div className="max-w-md mx-auto grid" style={{ gridTemplateColumns: `repeat(${items.length}, 1fr)` }}>
+      <div
+        className="max-w-md mx-auto relative grid"
+        style={{ gridTemplateColumns: `repeat(${items.length}, 1fr)` }}
+      >
+        <span
+          aria-hidden
+          className="absolute top-1.5 bottom-1.5 rounded-2xl bg-emerald-50 transition-transform duration-300 ease-out"
+          style={{
+            width: `${100 / items.length}%`,
+            transform: `translateX(${activeIndex * 100}%)`,
+          }}
+        />
         {items.map((item) => {
           const isActive = item.key === active
           return (
@@ -25,11 +38,13 @@ export default function BottomNav<T extends string>({
               key={item.key}
               type="button"
               onClick={() => onChange(item.key)}
-              className={`flex flex-col items-center gap-0.5 py-2.5 text-xs font-medium transition ${
+              className={`relative z-10 flex flex-col items-center gap-0.5 py-2.5 text-xs font-medium transition-colors ${
                 isActive ? 'text-emerald-600' : 'text-slate-400'
               }`}
             >
-              <span className={`text-lg transition ${isActive ? 'scale-110' : ''}`}>
+              <span
+                className={`text-lg transition-transform duration-300 ${isActive ? 'scale-110' : ''}`}
+              >
                 {item.icon}
               </span>
               {item.label}

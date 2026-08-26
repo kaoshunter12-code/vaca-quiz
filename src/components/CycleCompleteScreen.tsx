@@ -1,4 +1,5 @@
 import type { CycleChoice } from '../data/rotationStore'
+import Mascot from './Mascot'
 
 interface CycleCompleteScreenProps {
   daysPerBatch: number
@@ -22,6 +23,8 @@ export default function CycleCompleteScreen({
             <br />
             전체 과정을 완주했어요! 🎉
           </p>
+
+          <Mascot message="정말 대단해요! 이 기세로 계속 가볼까요?" />
 
           <div className="w-full h-px bg-slate-100 my-2" />
 

@@ -6,6 +6,7 @@ import { findWordToken } from '../lib/findWordToken'
 import { DAILY_WORD_COUNT } from '../lib/constants'
 import ProgressBar from '../components/ProgressBar'
 import BlankFillCard from '../components/BlankFillCard'
+import Spinner from '../components/Spinner'
 
 interface QuizPageProps {
   onGoToLearn?: () => void
@@ -51,11 +52,7 @@ export default function QuizPage({ onGoToLearn }: QuizPageProps) {
   }
 
   if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center text-slate-400">
-        불러오는 중...
-      </div>
-    )
+    return <Spinner />
   }
 
   if (total === 0) {

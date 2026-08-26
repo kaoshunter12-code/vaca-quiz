@@ -12,10 +12,12 @@ function App() {
 
   return (
     <div className="pb-16">
-      {tab === 'learn' && <LearnPage onGoToQuiz={() => setTab('quiz')} />}
-      {tab === 'quiz' && <QuizPage onGoToLearn={() => setTab('learn')} />}
-      {tab === 'review' && <ReviewPage onGoToLearn={() => setTab('learn')} />}
-      {tab === 'stats' && <StatsPage onGoToLearn={() => setTab('learn')} />}
+      <div key={tab} className="animate-tab-fade">
+        {tab === 'learn' && <LearnPage onGoToQuiz={() => setTab('quiz')} />}
+        {tab === 'quiz' && <QuizPage onGoToLearn={() => setTab('learn')} />}
+        {tab === 'review' && <ReviewPage onGoToLearn={() => setTab('learn')} />}
+        {tab === 'stats' && <StatsPage onGoToLearn={() => setTab('learn')} />}
+      </div>
 
       <BottomNav
         items={[

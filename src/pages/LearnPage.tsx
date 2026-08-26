@@ -7,6 +7,8 @@ import { DAILY_WORD_COUNT } from '../lib/constants'
 import WordCard from '../components/WordCard'
 import ProgressBar from '../components/ProgressBar'
 import CycleCompleteScreen from '../components/CycleCompleteScreen'
+import Spinner from '../components/Spinner'
+import Mascot from '../components/Mascot'
 
 const ENCOURAGEMENTS = [
   '좋아요! 이 속도 유지해요 🐣',
@@ -109,11 +111,7 @@ export default function LearnPage({ onGoToQuiz }: LearnPageProps) {
   }
 
   if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center text-slate-400">
-        불러오는 중...
-      </div>
-    )
+    return <Spinner />
   }
 
   if (cycleStatus?.awaitingChoice) {
@@ -159,9 +157,9 @@ export default function LearnPage({ onGoToQuiz }: LearnPageProps) {
               <WordCard key={currentWord.id} word={currentWord} />
             </div>
 
-            <p className="text-center text-sm text-emerald-600 font-medium -mt-2">
-              {encouragement}
-            </p>
+            <div className="-mt-2">
+              <Mascot message={encouragement} />
+            </div>
 
             <div className="flex items-center gap-3">
               <button
