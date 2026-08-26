@@ -32,12 +32,13 @@ export default function BlankFillCard({ word, blank, onAnswered, onNext }: Blank
   const submitAnswer = useCallback(() => {
     const value = input.trim()
     if (status !== 'answering' || value.length === 0) return
-    const isCorrect = value.toLowerCase() === blank.text.toLowerCase()
-    // eslint-disable-next-line no-console
-    console.log('[SUBMIT DEBUG]', JSON.stringify({ word: word.word, inputStateAtSubmit: input, trimmed: value }))
+    // NFKC 정규화 후 비교한다: 자모가 분리된 형태나 폭이 다른(전각/반각) 문자처럼
+    // 화면엔 같아 보여도 코드상 다른 유니코드로 입력될 수 있는 경우를 방지한다.
+    const isCorrect =
+      value.normalize('NFKC').toLowerCase() === blank.text.trim().normalize('NFKC').toLowerCase()
     setStatus(isCorrect ? 'correct' : 'incorrect')
     onAnswered(isCorrect)
-  }, [status, input, blank, onAnswered, word.word])
+  }, [status, input, blank, onAnswered])
 
   useEffect(() => {
     // 어떤 요소가 포커스를 갖고 있는지와 상관없이 Enter 키가 항상 동작하도록
@@ -84,14 +85,7 @@ export default function BlankFillCard({ word, blank, onAnswered, onNext }: Blank
           ref={inputRef}
           type="text"
           value={status === 'answering' ? input : blank.text}
-          onChange={(e) => {
-            // eslint-disable-next-line no-console
-            console.log(
-              '[ONCHANGE DEBUG]',
-              JSON.stringify({ word: word.word, newValue: e.target.value }),
-            )
-            setInput(e.target.value)
-          }}
+          onChange={(e) => setInput(e.target.value)}
           disabled={status !== 'answering'}
           autoComplete="off"
           autoCapitalize="off"
