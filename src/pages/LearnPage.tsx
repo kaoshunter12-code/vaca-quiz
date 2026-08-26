@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Word } from '../types/word'
-import { wordRepository, type DailySetInfo } from '../data/wordRepository'
+import { wordRepository, type DailySetInfo, type CycleStatus } from '../data/wordRepository'
+import { setCycleChoice, type CycleChoice } from '../data/rotationStore'
 import { recordDailyCompletion } from '../data/statsStore'
 import { DAILY_WORD_COUNT } from '../lib/constants'
 import WordCard from '../components/WordCard'
 import ProgressBar from '../components/ProgressBar'
+import CycleCompleteScreen from '../components/CycleCompleteScreen'
 
 const ENCOURAGEMENTS = [
   '좋아요! 이 속도 유지해요 🐣',
@@ -17,28 +19,50 @@ interface LearnPageProps {
   onGoToQuiz?: () => void
 }
 
+interface DailyState {
+  cycleStatus: CycleStatus
+  words: Word[]
+  setInfo: DailySetInfo | null
+}
+
 export default function LearnPage({ onGoToQuiz }: LearnPageProps) {
-  const [words, setWords] = useState<Word[]>([])
-  const [setInfo, setSetInfo] = useState<DailySetInfo | null>(null)
+  const [daily, setDaily] = useState<DailyState | null>(null)
   const [index, setIndex] = useState(0)
-  const [loading, setLoading] = useState(true)
   const touchStartX = useRef<number | null>(null)
   const [dragX, setDragX] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
 
-  useEffect(() => {
-    Promise.all([
+  async function fetchDailyState(): Promise<DailyState> {
+    const status = await wordRepository.getCycleStatus(DAILY_WORD_COUNT)
+    if (status.awaitingChoice) {
+      return { cycleStatus: status, words: [], setInfo: null }
+    }
+    const [w, info] = await Promise.all([
       wordRepository.getDailyWords(DAILY_WORD_COUNT),
       wordRepository.getDailySetInfo(DAILY_WORD_COUNT),
-    ]).then(
-      ([w, info]) => {
-        setWords(w)
-        setSetInfo(info)
-        setLoading(false)
-      },
-    )
+    ])
+    return { cycleStatus: status, words: w, setInfo: info }
+  }
+
+  async function loadToday() {
+    setDaily(await fetchDailyState())
+  }
+
+  useEffect(() => {
+    loadToday()
   }, [])
 
+  function handleChooseCycle(choice: CycleChoice) {
+    setCycleChoice(choice)
+    setIndex(0)
+    setDaily(null)
+    loadToday()
+  }
+
+  const loading = daily === null
+  const words = daily?.words ?? []
+  const setInfo = daily?.setInfo ?? null
+  const cycleStatus = daily?.cycleStatus ?? null
   const total = words.length
   const isDone = total > 0 && index >= total
   const currentWord = !isDone ? words[index] : undefined
@@ -89,6 +113,16 @@ export default function LearnPage({ onGoToQuiz }: LearnPageProps) {
       <div className="min-h-screen flex items-center justify-center text-slate-400">
         불러오는 중...
       </div>
+    )
+  }
+
+  if (cycleStatus?.awaitingChoice) {
+    return (
+      <CycleCompleteScreen
+        daysPerBatch={cycleStatus.daysPerBatch}
+        hasSecondBatch={cycleStatus.hasSecondBatch}
+        onChoose={handleChooseCycle}
+      />
     )
   }
 

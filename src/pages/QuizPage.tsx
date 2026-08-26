@@ -58,6 +58,31 @@ export default function QuizPage({ onGoToLearn }: QuizPageProps) {
     )
   }
 
+  if (total === 0) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
+        <div className="w-full max-w-md flex flex-col gap-6">
+          <div className="rounded-3xl bg-white shadow-lg shadow-slate-200/70 ring-1 ring-slate-100 p-10 flex flex-col items-center gap-3 text-center">
+            <span className="text-5xl">🏆</span>
+            <h2 className="text-lg font-bold text-slate-800">완주 안내를 먼저 확인해주세요</h2>
+            <p className="text-slate-500 text-sm">
+              학습 화면에서 다음 단어를 어떻게 이어갈지 선택하면 퀴즈도 다시 시작돼요.
+            </p>
+            {onGoToLearn && (
+              <button
+                type="button"
+                onClick={onGoToLearn}
+                className="mt-2 px-5 py-2.5 rounded-2xl bg-emerald-500 text-white font-medium active:scale-95 transition hover:bg-emerald-600"
+              >
+                학습 화면으로 가기
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
       <div className="w-full max-w-md flex flex-col gap-6">
