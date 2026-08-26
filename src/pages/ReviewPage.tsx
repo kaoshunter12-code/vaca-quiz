@@ -3,6 +3,7 @@ import type { Word } from '../types/word'
 import { wordRepository } from '../data/wordRepository'
 import { getDueWordIds, recordReview } from '../data/reviewStore'
 import { findWordToken } from '../lib/findWordToken'
+import { DAILY_WORD_COUNT } from '../lib/constants'
 import ProgressBar from '../components/ProgressBar'
 import BlankFillCard from '../components/BlankFillCard'
 
@@ -20,12 +21,17 @@ export default function ReviewPage({ onGoToLearn }: ReviewPageProps) {
   }, [])
 
   async function loadDueWords() {
-    const [allWords, dueIds] = await Promise.all([
-      wordRepository.getAllWords(),
+    // 복습은 "오늘 학습 세트에서 틀린 단어 다시 풀기"로 한정한다. 날짜가
+    // 바뀌어 세트가 로테이션되면 어제 이전에 틀린 단어는 더 이상 뜨지
+    // 않고, 복습 화면도 자연스럽게 매일 새로 시작된다. (SM-2 스케줄
+    // 자체는 reviewStore에 계속 기록되어, 추후 장기 복습 기능에 재사용할
+    // 수 있다.)
+    const [todaysWords, dueIds] = await Promise.all([
+      wordRepository.getDailyWords(DAILY_WORD_COUNT),
       Promise.resolve(getDueWordIds()),
     ])
     const dueIdSet = new Set(dueIds)
-    setDueWords(allWords.filter((w) => dueIdSet.has(w.id)))
+    setDueWords(todaysWords.filter((w) => dueIdSet.has(w.id)))
   }
 
   const total = dueWords?.length ?? 0
@@ -67,13 +73,13 @@ export default function ReviewPage({ onGoToLearn }: ReviewPageProps) {
         <div className="w-full max-w-md flex flex-col gap-6">
           <header className="flex flex-col gap-1">
             <h1 className="text-xl font-bold text-slate-800">복습</h1>
-            <p className="text-sm text-slate-400">간격 반복으로 잊어버리기 전에 다시 만나요</p>
+            <p className="text-sm text-slate-400">오늘 퀴즈에서 틀린 단어를 다시 풀어봐요</p>
           </header>
           <div className="rounded-3xl bg-white shadow-lg shadow-slate-200/70 ring-1 ring-slate-100 p-10 flex flex-col items-center gap-3 text-center">
             <span className="text-5xl">🌱</span>
             <h2 className="text-lg font-bold text-slate-800">지금은 복습할 단어가 없어요</h2>
             <p className="text-slate-500 text-sm">
-              퀴즈를 풀면 여기에 복습할 단어가 하나둘 쌓여요. 특히 틀린 단어는 곧 다시 나타나요.
+              오늘의 퀴즈를 다 풀고 틀린 단어가 있으면 여기에 나타나요.
             </p>
             {onGoToLearn && (
               <button
@@ -95,7 +101,7 @@ export default function ReviewPage({ onGoToLearn }: ReviewPageProps) {
       <div className="w-full max-w-md flex flex-col gap-6">
         <header className="flex flex-col gap-1">
           <h1 className="text-xl font-bold text-slate-800">복습</h1>
-          <p className="text-sm text-slate-400">간격 반복으로 잊어버리기 전에 다시 만나요</p>
+          <p className="text-sm text-slate-400">오늘 퀴즈에서 틀린 단어를 다시 풀어봐요</p>
         </header>
 
         <ProgressBar current={Math.min(index, total)} total={total} />
@@ -116,7 +122,7 @@ export default function ReviewPage({ onGoToLearn }: ReviewPageProps) {
             <h2 className="text-xl font-bold text-slate-800">복습 완료!</h2>
             <p className="text-slate-500 text-sm">
               {total}개 중 <span className="font-semibold text-amber-600">{correctCount}개</span> 맞혔어요.
-              틀린 단어는 오늘 다시 복습 큐에 들어와요.
+              여전히 틀린 단어는 아래에서 다시 확인할 수 있어요.
             </p>
             <button
               type="button"
