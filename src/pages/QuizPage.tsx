@@ -57,7 +57,7 @@ export default function QuizPage({ onGoToLearn }: QuizPageProps) {
 
   if (total === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
+      <div className="min-h-full bg-gradient-to-b from-sky-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
         <div className="w-full max-w-md flex flex-col gap-6">
           <div className="rounded-3xl bg-white shadow-lg shadow-slate-200/70 ring-1 ring-slate-100 p-10 flex flex-col items-center gap-3 text-center">
             <span className="text-5xl">🏆</span>
@@ -81,7 +81,7 @@ export default function QuizPage({ onGoToLearn }: QuizPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
+    <div className="min-h-full bg-gradient-to-b from-sky-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
       <div className="w-full max-w-md flex flex-col gap-6">
         <header className="flex flex-col gap-1">
           <h1 className="text-xl font-bold text-slate-800">빈칸 채우기 퀴즈</h1>

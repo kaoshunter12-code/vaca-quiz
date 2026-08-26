@@ -66,7 +66,7 @@ export default function ReviewPage({ onGoToLearn }: ReviewPageProps) {
 
   if (total === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
+      <div className="min-h-full bg-gradient-to-b from-amber-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
         <div className="w-full max-w-md flex flex-col gap-6">
           <header className="flex flex-col gap-1">
             <h1 className="text-xl font-bold text-slate-800">복습</h1>
@@ -94,7 +94,7 @@ export default function ReviewPage({ onGoToLearn }: ReviewPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
+    <div className="min-h-full bg-gradient-to-b from-amber-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
       <div className="w-full max-w-md flex flex-col gap-6">
         <header className="flex flex-col gap-1">
           <h1 className="text-xl font-bold text-slate-800">복습</h1>

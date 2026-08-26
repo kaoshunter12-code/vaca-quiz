@@ -18,9 +18,9 @@ export default function BottomNav<T extends string>({
   const activeIndex = Math.max(0, items.findIndex((item) => item.key === active))
 
   return (
-    <nav className="fixed bottom-0 inset-x-0 z-20 bg-white/90 backdrop-blur border-t border-slate-100">
+    <nav className="shrink-0 bg-white border-t border-slate-100">
       <div
-        className="max-w-md mx-auto relative grid"
+        className="relative grid"
         style={{ gridTemplateColumns: `repeat(${items.length}, 1fr)` }}
       >
         <span

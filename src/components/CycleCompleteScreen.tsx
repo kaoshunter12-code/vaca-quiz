@@ -13,7 +13,7 @@ export default function CycleCompleteScreen({
   onChoose,
 }: CycleCompleteScreenProps) {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
+    <div className="min-h-full bg-gradient-to-b from-amber-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
       <div className="w-full max-w-md flex flex-col gap-6">
         <div className="rounded-3xl bg-white shadow-lg shadow-slate-200/70 ring-1 ring-slate-100 p-8 sm:p-10 flex flex-col items-center gap-4 text-center">
           <span className="text-6xl">🏆</span>

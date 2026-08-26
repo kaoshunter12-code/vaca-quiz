@@ -125,7 +125,7 @@ export default function LearnPage({ onGoToQuiz }: LearnPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-emerald-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
+    <div className="min-h-full bg-gradient-to-b from-emerald-50 via-white to-white flex flex-col items-center px-4 py-6 sm:py-10">
       <div className="w-full max-w-md flex flex-col gap-6">
         <header className="flex flex-col gap-1">
           <div className="flex items-center gap-2">
