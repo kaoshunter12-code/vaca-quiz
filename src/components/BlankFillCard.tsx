@@ -83,14 +83,14 @@ export default function BlankFillCard({ word, blank, onAnswered, onNext }: Blank
         <input
           ref={inputRef}
           type="text"
-          value={status === 'answering' ? input : blank.text}
+          value={status === 'correct' ? blank.text : input}
           onChange={(e) => setInput(e.target.value)}
           disabled={status !== 'answering'}
           autoComplete="off"
           autoCapitalize="off"
           autoCorrect="off"
           spellCheck={false}
-          size={Math.max(blank.text.length, 4)}
+          size={Math.max(input.length, blank.text.length, 4)}
           className={`mx-1 inline-block text-center border-b-2 bg-transparent outline-none font-semibold transition-colors ${inputStateClass}`}
         />
         {after}
